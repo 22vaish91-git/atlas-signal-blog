@@ -7,12 +7,12 @@ tags: ["markets", "atlas-signal", "deep-research"]
 description: "# The Liquidity Trap Nobody's Discussing: How Passive Index Rebalancing Is Breaking Price Discovery
 
 ## The Liquidity Trap Nobody's Discussing: How Passive Inde"
-canonical_url: "https://22vaish91-git.github.io/atlas-signal-blog/posts/2026-03-02-the-liquidity-trap-nobody-s-discussing-how-passive-index-reb"
+canonical_url: "https://22vaish91-git.github.io/atlas-signal-blog/posts/the-liquidity-trap-nobody-s-discussing-how-passive-index-reb/"
 og_title: "The Liquidity Trap Nobody's Discussing: How Passive Index Rebalancing Is Breaking Price Discovery"
 og_description: "# The Liquidity Trap Nobody's Discussing: How Passive Index Rebalancing Is Breaking Price Discovery
 
 ## The Liquidity Trap Nobody's Discussing: How Passive Inde"
-og_url: "https://22vaish91-git.github.io/atlas-signal-blog/posts/2026-03-02-the-liquidity-trap-nobody-s-discussing-how-passive-index-reb"
+og_url: "https://22vaish91-git.github.io/atlas-signal-blog/posts/the-liquidity-trap-nobody-s-discussing-how-passive-index-reb/"
 twitter_card: summary_large_image
 ---
 
