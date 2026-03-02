@@ -1,10 +1,26 @@
-title: "AtlasSignal Blog"
-description: "AI-powered intelligence — deep research, market signals, global analysis"
+title: "AtlasSignal"
+description: "AI-powered news intelligence — deep research, market signals, global analysis"
 url: "https://22vaish91-git.github.io"
 baseurl: "/atlas-signal-blog"
+twitter_username: AtlasSignalDesk
+github_username: 22vaish91-git
+
+# Permalink structure — matches blog_url generation in scheduler handler
 permalink: /posts/:slug/
+
+# Build settings
 markdown: kramdown
-theme: minima
+theme: ~
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
