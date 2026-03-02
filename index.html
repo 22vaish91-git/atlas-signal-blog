@@ -1,0 +1,10 @@
+---
+layout: default
+title: AtlasSignal Blog
+---
+<h1>AtlasSignal Intelligence Blog</h1>
+<ul>
+{% for post in site.posts %}
+  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y-%m-%d" }} &mdash; {{ post.title }}</a></li>
+{% endfor %}
+</ul>
