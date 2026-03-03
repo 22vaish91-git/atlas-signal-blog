@@ -1,3 +1,135 @@
 <!-- Google AdSense — replace YOUR_ADSENSE_ID with your publisher ID when approved -->
 <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_ID"
    crossorigin="anonymous"></script> -->
+
+<!-- AtlasSignal Custom Styles — uniform across all pages -->
+<style>
+  /* ── Masthead / Nav bar branding ───────────────────────────────────── */
+  .masthead {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .masthead .site-title img {
+    max-height: 36px;
+    margin-right: 0.4em;
+    vertical-align: middle;
+  }
+  .greedy-nav a {
+    color: #e0e0e0 !important;
+  }
+  .greedy-nav a:hover {
+    color: #79b8ff !important;
+  }
+
+  /* ── Footer styling ────────────────────────────────────────────────── */
+  .page__footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: #0d1117;
+  }
+  .page__footer footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2em 1em;
+  }
+
+  /* ── Email capture banner (shown on all pages) ─────────────────────── */
+  .as-email-capture {
+    background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+    border: 1px solid rgba(121, 184, 255, 0.15);
+    border-radius: 10px;
+    padding: 2em 1.5em;
+    margin: 2.5em 0;
+    text-align: center;
+  }
+  .as-email-capture h3 {
+    color: #79b8ff;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+  }
+  .as-email-capture p {
+    color: #b0bec5;
+    margin-bottom: 1em;
+    font-size: 0.95em;
+  }
+  .as-email-capture .btn {
+    background: #238636;
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.8em;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+  .as-email-capture .btn:hover {
+    background: #2ea043;
+    color: #fff;
+  }
+
+  /* ── Category/topic pills ──────────────────────────────────────────── */
+  .page__taxonomy-item {
+    background: rgba(121, 184, 255, 0.1);
+    border: 1px solid rgba(121, 184, 255, 0.2);
+    border-radius: 4px;
+    padding: 0.2em 0.6em;
+    font-size: 0.85em;
+  }
+
+  /* ── Post cards on home grid ───────────────────────────────────────── */
+  .archive__item {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  .archive__item-title a {
+    color: #e6edf3 !important;
+  }
+  .archive__item-title a:hover {
+    color: #79b8ff !important;
+  }
+
+  /* ── Author sidebar polish ─────────────────────────────────────────── */
+  .author__avatar img {
+    border-radius: 10px;
+    border: 2px solid rgba(121, 184, 255, 0.2);
+  }
+  .author__bio {
+    color: #b0bec5;
+    font-style: italic;
+  }
+
+  /* ── TOC styling ───────────────────────────────────────────────────── */
+  .toc__menu a {
+    color: #b0bec5;
+    border-bottom: 1px solid transparent;
+  }
+  .toc__menu a:hover,
+  .toc__menu a.active {
+    color: #79b8ff;
+  }
+
+  /* ── Responsive header image ───────────────────────────────────────── */
+  .page__hero--overlay {
+    min-height: 250px;
+  }
+  @media (min-width: 768px) {
+    .page__hero--overlay {
+      min-height: 350px;
+    }
+  }
+
+  /* ── Content readability ───────────────────────────────────────────── */
+  .page__content p {
+    line-height: 1.75;
+  }
+  .page__content h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 0.3em;
+    margin-top: 2em;
+  }
+
+  /* ── Share buttons ─────────────────────────────────────────────────── */
+  .page__share-title {
+    color: #79b8ff;
+  }
+</style>
