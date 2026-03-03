@@ -1,10 +1,12 @@
 ---
-layout: default
-title: AtlasSignal Blog
+layout: home
+title: "AtlasSignal — AI News Intelligence"
+description: "Deep research and market-moving analysis powered by AI"
+header:
+  overlay_color: "#0d1117"
+  overlay_filter: "0.5"
+  actions:
+    - label: "Follow on X"
+      url: "https://twitter.com/AtlasSignalDesk"
+  excerpt: "AI-powered daily intelligence on tech, AI, economy, markets, and global politics."
 ---
-<h1>AtlasSignal Intelligence Blog</h1>
-<ul>
-{% for post in site.posts %}
-  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y-%m-%d" }} &mdash; {{ post.title }}</a></li>
-{% endfor %}
-</ul>
