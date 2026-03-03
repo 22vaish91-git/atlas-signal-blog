@@ -1,24 +1,102 @@
+# ── Site Settings ─────────────────────────────────────────────────────────────
 title: "AtlasSignal"
-description: "AI-powered news intelligence — deep research, market signals, global analysis"
+subtitle: "AI-Powered News Intelligence"
+description: "Deep research, market signals, and global analysis — powered by AI"
 url: "https://atlassignal.in"
 baseurl: ""
-twitter_username: AtlasSignalDesk
-github_username: 22vaish91-git
+repository: "22vaish91-git/atlas-signal-blog"
+logo: "/assets/images/logo.png"
 
-# Permalink structure — matches blog_url generation in scheduler handler
+# ── Theme ─────────────────────────────────────────────────────────────────────
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "dark"       # dark skin for intelligence/tech aesthetic
+
+# ── Permalink structure — matches blog_url generation in scheduler handler ────
 permalink: /posts/:slug/
 
-# Build settings
+# ── Build settings ────────────────────────────────────────────────────────────
 markdown: kramdown
-theme: ~
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
-# Plugins
+# ── Plugins ───────────────────────────────────────────────────────────────────
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
 
-# Exclude from build
+# ── Pagination ────────────────────────────────────────────────────────────────
+paginate: 15
+paginate_path: /page:num/
+
+# ── Author (sidebar profile) ─────────────────────────────────────────────────
+author:
+  name: "AtlasSignal"
+  bio: "AI-powered daily intelligence on tech, AI, economy, markets, and global politics."
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/AtlasSignalDesk"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://atlassignal.in"
+
+# ── Footer ────────────────────────────────────────────────────────────────────
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/AtlasSignalDesk"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/22vaish91-git"
+
+# ── Reading ───────────────────────────────────────────────────────────────────
+words_per_minute: 200
+show_date: true
+
+# ── SEO & Analytics ───────────────────────────────────────────────────────────
+twitter:
+  username: "AtlasSignalDesk"
+social:
+  type: Organization
+  name: AtlasSignal
+  links:
+    - "https://twitter.com/AtlasSignalDesk"
+
+# ── Post defaults ─────────────────────────────────────────────────────────────
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      show_date: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+    values:
+      layout: single
+
+# ── Category & tag archives ──────────────────────────────────────────────────
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# ── Exclude from build ───────────────────────────────────────────────────────
 exclude:
   - README.md
   - Gemfile
