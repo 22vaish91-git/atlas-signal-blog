@@ -5,7 +5,7 @@ description: "Deep research, market signals, and global analysis — powered by 
 url: "https://atlassignal.in"
 baseurl: ""
 repository: "22vaish91-git/atlas-signal-blog"
-logo: "/assets/images/logo.png"
+logo: "/assets/images/header.png"
 
 # ── Theme ─────────────────────────────────────────────────────────────────────
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -36,7 +36,9 @@ paginate_path: /page:num/
 # ── Author (sidebar profile) ─────────────────────────────────────────────────
 author:
   name: "AtlasSignal"
-  bio: "AI-powered daily intelligence on tech, AI, economy, markets, and global politics."
+  avatar: "/assets/images/header.png"
+  bio: "AI-powered news intelligence — cutting through noise to deliver the signals that matter."
+  email: "atlassignal.ai@gmail.com"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -44,6 +46,9 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://atlassignal.in"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:atlassignal.ai@gmail.com"
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 footer:
@@ -54,6 +59,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/22vaish91-git"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:atlassignal.ai@gmail.com"
 
 # ── Reading ───────────────────────────────────────────────────────────────────
 words_per_minute: 200
@@ -84,17 +92,20 @@ defaults:
       toc: true
       toc_sticky: true
   - scope:
+      path: "_pages"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
       path: ""
     values:
       layout: single
+      author_profile: true
 
-# ── Category & tag archives ──────────────────────────────────────────────────
+# ── Category archive ─────────────────────────────────────────────────────────
 category_archive:
   type: liquid
   path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 # ── Exclude from build ───────────────────────────────────────────────────────
 exclude:
@@ -102,3 +113,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - "atlas signal header.png"
