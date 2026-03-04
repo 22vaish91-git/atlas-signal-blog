@@ -4,16 +4,10 @@ title: "AI Code Review: Automate PR Reviews with Claude API in 15 Minutes"
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![AI Code Review: Automate PR Reviews with Claude API in 15 Minutes](https://images.pexels.com/photos/3480"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-api-in-15-min/"
 og_title: "AI Code Review: Automate PR Reviews with Claude API in 15 Minutes"
-og_description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![AI Code Review: Automate PR Reviews with Claude API in 15 Minutes](https://images.pexels.com/photos/3480"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-api-in-15-min/"
 og_image: "https://images.pexels.com/photos/34804018/pexels-photo-34804018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Intermediate | **Category:** Coding
-
-
-![AI Code Review: Automate PR Reviews with Claude API in 15 Minutes](https://images.pexels.com/photos/34804018/pexels-photo-34804018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -62,7 +53,6 @@ Before you start, make sure you have:
 ### Step 1: Install Required Dependencies
 
 First, set up your Python environment with the Anthropic SDK and GitHub integration libraries:
-
 
 
 ---
