@@ -70,8 +70,7 @@ Most AI PMs ship features, watch qualitative feedback, and hope for the best. Pr
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Actionable task: Create an evaluation suite with three components:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
