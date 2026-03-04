@@ -64,8 +64,7 @@ Anthropic provides an official Python SDK that handles protocol implementation:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Anthropic provides an official Python SDK that handles protocol implementation:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
