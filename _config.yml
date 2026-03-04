@@ -5,7 +5,7 @@ description: "Deep research, market signals, and global analysis"
 url: "https://atlassignal.in"
 baseurl: ""
 repository: "22vaish91-git/atlas-signal-blog"
-logo: "/assets/images/logo.svg"
+logo: "/assets/images/header.png"
 
 # ── Theme ─────────────────────────────────────────────────────────────────────
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -36,7 +36,7 @@ paginate_path: /page:num/
 # ── Author (sidebar profile) ─────────────────────────────────────────────────
 author:
   name: "AtlasSignal"
-  avatar: "/assets/images/logo.svg"
+  avatar: "/assets/images/header.png"
   bio: "News intelligence — cutting through noise to deliver the signals that matter."
   email: "atlassignal.ai@gmail.com"
   links:
