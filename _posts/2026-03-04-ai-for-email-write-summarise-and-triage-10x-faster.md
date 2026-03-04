@@ -55,8 +55,7 @@ First, install the required libraries. We'll use `openai` for AI capabilities an
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, install the required libraries. We'll use openai for AI capabilities and imaplib for email access:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
