@@ -71,8 +71,7 @@ Install the OpenAI Python library and a prompt chain framework:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Install the OpenAI Python library and a prompt chain framework:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
