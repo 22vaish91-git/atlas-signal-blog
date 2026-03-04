@@ -4,10 +4,10 @@ title: "Building Custom Agents with the Anthropic API: A Production-Ready Guide"
 date: 2026-03-04
 category: "ai_tools"
 tags: ["ai_tools", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "As of March 2026, 67% of enterprise AI implementations use agentic workflows rather than simple chatbots, according to Gartner's latest AI survey. The Anth"
 canonical_url: "https://atlassignal.in/posts/building-custom-agents-with-the-anthropic-api-a-production-r/"
 og_title: "Building Custom Agents with the Anthropic API: A Production-Ready Guide"
-og_description: "<ins class='adsbygoogle'"
+og_description: "As of March 2026, 67% of enterprise AI implementations use agentic workflows rather than simple chatbots, according to Gartner's latest AI survey. The Anth"
 og_url: "https://atlassignal.in/posts/building-custom-agents-with-the-anthropic-api-a-production-r/"
 og_image: "https://images.pexels.com/photos/7709114/pexels-photo-7709114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -68,7 +68,9 @@ Anthropic uses a specific JSON schema format for tools. Here's how to structure 
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
