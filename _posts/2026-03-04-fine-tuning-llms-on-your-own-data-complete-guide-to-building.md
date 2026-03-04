@@ -70,8 +70,7 @@ Format your data as JSONL with instruction-response pairs:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Format your data as JSONL with instruction-response pairs:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
