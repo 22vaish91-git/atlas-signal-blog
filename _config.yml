@@ -36,7 +36,7 @@ paginate_path: /page:num/
 # ── Author (sidebar profile) ─────────────────────────────────────────────────
 author:
   name: "AtlasSignal"
-  avatar: "/assets/images/header.png"
+  avatar: "/assets/images/logo.svg"
   bio: "News intelligence — cutting through noise to deliver the signals that matter."
   email: "atlassignal.ai@gmail.com"
   links:
