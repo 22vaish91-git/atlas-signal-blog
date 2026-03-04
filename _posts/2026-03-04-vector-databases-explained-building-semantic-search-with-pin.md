@@ -4,16 +4,10 @@ title: "Vector Databases Explained: Building Semantic Search with Pinecone, Weav
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![Vector Databases Explained: Building Semantic Search with Pinecone, Weaviate, and Chroma](https://images"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/vector-databases-explained-building-semantic-search-with-pin/"
 og_title: "Vector Databases Explained: Building Semantic Search with Pinecone, Weaviate, and Chroma"
-og_description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![Vector Databases Explained: Building Semantic Search with Pinecone, Weaviate, and Chroma](https://images"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/vector-databases-explained-building-semantic-search-with-pin/"
 og_image: "https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Intermediate | **Category:** Coding
-
-
-![Vector Databases Explained: Building Semantic Search with Pinecone, Weaviate, and Chroma](https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -72,7 +63,6 @@ Think of it like this: Traditional search finds documents containing "pizza" and
 Pinecone is the easiest entry point—fully managed, serverless, and production-ready. Their free tier gives you 100K vectors and 5GB storage.
 
 First, create an account at pinecone.io and grab your API key. Then:
-
 
 
 ---
