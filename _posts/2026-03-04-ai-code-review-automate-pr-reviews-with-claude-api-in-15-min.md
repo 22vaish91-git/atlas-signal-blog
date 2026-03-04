@@ -57,8 +57,7 @@ First, set up your Python environment with the Anthropic SDK and GitHub integrat
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, set up your Python environment with the Anthropic SDK and GitHub integration libraries:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
