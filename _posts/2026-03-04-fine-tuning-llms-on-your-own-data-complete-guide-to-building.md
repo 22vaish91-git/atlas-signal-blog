@@ -4,10 +4,10 @@ title: "Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI 
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "OpenAI reported that fine-tuned GPT-3.5 models outperform base GPT-4 on specific tasks by up to 30% while costing 60% less per token. With fine-tuning APIs"
 canonical_url: "https://atlassignal.in/posts/fine-tuning-llms-on-your-own-data-complete-guide-to-building/"
 og_title: "Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI Models"
-og_description: "<ins class='adsbygoogle'"
+og_description: "OpenAI reported that fine-tuned GPT-3.5 models outperform base GPT-4 on specific tasks by up to 30% while costing 60% less per token. With fine-tuning APIs"
 og_url: "https://atlassignal.in/posts/fine-tuning-llms-on-your-own-data-complete-guide-to-building/"
 og_image: "https://images.pexels.com/photos/18069490/pexels-photo-18069490.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -70,7 +70,9 @@ Format your data as JSONL with instruction-response pairs:
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
