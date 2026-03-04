@@ -5,7 +5,7 @@ description: "Deep research, market signals, and global analysis"
 url: "https://atlassignal.in"
 baseurl: ""
 repository: "22vaish91-git/atlas-signal-blog"
-logo: "/assets/images/header.png"
+logo: "/assets/images/logo.svg"
 
 # ── Theme ─────────────────────────────────────────────────────────────────────
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
