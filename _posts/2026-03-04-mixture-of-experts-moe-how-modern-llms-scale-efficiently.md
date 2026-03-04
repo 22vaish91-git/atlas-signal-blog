@@ -4,10 +4,10 @@ title: "Mixture of Experts (MoE): How Modern LLMs Scale Efficiently"
 date: 2026-03-04
 category: "concepts"
 tags: ["concepts", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "Mixtral 8x7B delivers GPT-3.5-level performance while using only 13B active parameters per token—that's 5x more efficient than traditional dense models. As"
 canonical_url: "https://atlassignal.in/posts/mixture-of-experts-moe-how-modern-llms-scale-efficiently/"
 og_title: "Mixture of Experts (MoE): How Modern LLMs Scale Efficiently"
-og_description: "<ins class='adsbygoogle'"
+og_description: "Mixtral 8x7B delivers GPT-3.5-level performance while using only 13B active parameters per token—that's 5x more efficient than traditional dense models. As"
 og_url: "https://atlassignal.in/posts/mixture-of-experts-moe-how-modern-llms-scale-efficiently/"
 og_image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 header:
@@ -65,7 +65,9 @@ The router is a small neural network (typically a linear layer + softmax) that d
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
