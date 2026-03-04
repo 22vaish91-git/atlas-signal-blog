@@ -81,6 +81,12 @@ The passive investing revolution has created a market structure where nearly hal
 ---
 **Key Takeaway:** ---
 
+
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
+
 ## 📧 Get Daily AI & Macro Intelligence
 
 Stay ahead of market-moving news, emerging tech, and global shifts.
