@@ -4,16 +4,10 @@ title: "Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI 
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Advanced | **Category:** Coding
-
-
-![Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI Models](https://images.pexels.com/ph"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/fine-tuning-llms-on-your-own-data-complete-guide-to-building/"
 og_title: "Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI Models"
-og_description: "**Difficulty:** Advanced | **Category:** Coding
-
-
-![Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI Models](https://images.pexels.com/ph"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/fine-tuning-llms-on-your-own-data-complete-guide-to-building/"
 og_image: "https://images.pexels.com/photos/18069490/pexels-photo-18069490.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Advanced | **Category:** Coding
-
-
-![Fine-Tuning LLMs on Your Own Data: Complete Guide to Building Custom AI Models](https://images.pexels.com/photos/18069490/pexels-photo-18069490.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -75,7 +66,6 @@ Choose between:
 ### Step 2: Prepare Your Training Data
 
 Format your data as JSONL with instruction-response pairs:
-
 
 
 ---
