@@ -17,12 +17,25 @@
 <div id="as-pgbar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa);z-index:10000;transition:width 0.08s linear;pointer-events:none;box-shadow:0 0 8px rgba(59,130,246,.6);"></div>
 <script>
 (function(){
+  // Reading progress bar
   function upd(){
     var d=document.documentElement,b=document.body;
     var t=d.scrollTop||b.scrollTop,h=(d.scrollHeight||b.scrollHeight)-d.clientHeight;
     document.getElementById("as-pgbar").style.width=(h>0?Math.min(t/h*100,100):0)+"%";
   }
   window.addEventListener("scroll",upd,{passive:true});
+
+  // Guard: MM theme queries .page__content on every page (incl. home) — null crash fix.
+  // Registered here (head) so our DOMContentLoaded fires before main.min.js registers its own.
+  document.addEventListener("DOMContentLoaded",function(){
+    if(!document.querySelector(".page__content")){
+      var g=document.createElement("div");
+      g.className="page__content";
+      g.setAttribute("aria-hidden","true");
+      g.style.cssText="display:none;contain:strict;position:absolute;pointer-events:none;";
+      document.body.appendChild(g);
+    }
+  });
 })();
 </script>
 
@@ -70,33 +83,47 @@ html{scroll-behavior:smooth;}
   padding:0 1.5em !important;
 }
 
-/* LOGO - force visible, square crop, glowing border */
+/* LOGO — text monogram "AS" (header.png is a landscape photo, unusable as a small icon) */
 a.site-logo,
 .site-logo,
 .greedy-nav a.site-logo{
   display:inline-flex !important;
   align-items:center !important;
-  margin-right:.5rem !important;
+  justify-content:center !important;
+  width:36px !important;
+  height:36px !important;
+  min-width:36px !important;
   flex-shrink:0 !important;
+  margin-right:.6rem !important;
+  background:linear-gradient(135deg,#2563eb 0%,#1e3a8a 100%) !important;
+  border-radius:8px !important;
+  border:1.5px solid rgba(59,130,246,.45) !important;
+  box-shadow:0 0 14px rgba(59,130,246,.35),inset 0 1px 0 rgba(255,255,255,.12) !important;
+  text-decoration:none !important;
+  position:relative !important;
 }
+a.site-logo::after,
+.site-logo::after,
+.greedy-nav a.site-logo::after{
+  content:"AS" !important;
+  font-family:"Space Grotesk",sans-serif !important;
+  font-size:12px !important;
+  font-weight:700 !important;
+  color:#fff !important;
+  letter-spacing:-.3px !important;
+  line-height:1 !important;
+  pointer-events:none !important;
+}
+/* Hide the broken landscape photo */
 a.site-logo img,
 .site-logo img,
 .masthead .site-logo img,
 .greedy-nav a.site-logo img{
-  display:inline-block !important;
-  width:40px !important;
-  height:40px !important;
-  max-height:40px !important;
-  min-width:40px !important;
-  object-fit:cover !important;
-  object-position:center center !important;
-  border-radius:8px !important;
-  border:1.5px solid rgba(59,130,246,.35) !important;
-  box-shadow:0 0 12px rgba(59,130,246,.25) !important;
-  filter:brightness(1.2) contrast(1.1) saturate(1.1) !important;
-  vertical-align:middle !important;
-  opacity:1 !important;
-  visibility:visible !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  visibility:hidden !important;
+  opacity:0 !important;
 }
 
 /* Site title & subtitle */
