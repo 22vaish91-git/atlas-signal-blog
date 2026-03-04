@@ -4,10 +4,10 @@ title: "AI Code Review: Automate PR Reviews with Claude API in 15 Minutes"
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "Developers spend an average of 8 hours per week reviewing pull requests, according to a 2025 GitHub survey—that's 20% of your workweek on repetitive code a"
 canonical_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-api-in-15-min/"
 og_title: "AI Code Review: Automate PR Reviews with Claude API in 15 Minutes"
-og_description: "<ins class='adsbygoogle'"
+og_description: "Developers spend an average of 8 hours per week reviewing pull requests, according to a 2025 GitHub survey—that's 20% of your workweek on repetitive code a"
 og_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-api-in-15-min/"
 og_image: "https://images.pexels.com/photos/34804018/pexels-photo-34804018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -57,7 +57,9 @@ First, set up your Python environment with the Anthropic SDK and GitHub integrat
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
