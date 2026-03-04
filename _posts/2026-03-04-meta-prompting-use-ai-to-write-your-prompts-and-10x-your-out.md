@@ -70,8 +70,7 @@ Here's the battle-tested meta-prompt structure that consistently produces profes
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Here's the battle-tested meta-prompt structure that consistently produces professional-grade prompts:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
