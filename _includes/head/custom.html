@@ -1,3 +1,8 @@
+<!-- Favicon & touch icon -->
+<link rel="shortcut icon" href="/assets/images/header.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/header.png">
+<meta name="theme-color" content="#0d1117">
+
 <!-- Google AdSense — replace YOUR_ADSENSE_ID with your publisher ID when approved -->
 <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_ID"
    crossorigin="anonymous"></script> -->
@@ -140,5 +145,64 @@
   /* ── Share buttons ─────────────────────────────────────────────────── */
   .page__share-title {
     color: #79b8ff;
+  }
+
+  /* ── Blog post inline images — full-width, polished ─────────────────── */
+  .page__content img {
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    margin: 1.8em auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  /* Pexels credit / image caption */
+  .page__content img + em,
+  .page__content p > img + br + em {
+    display: block;
+    text-align: center;
+    color: #6e7681;
+    font-size: 0.82em;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
+    font-style: italic;
+  }
+
+  /* ── Code blocks ────────────────────────────────────────────────────── */
+  .page__content pre.highlight,
+  .page__content div.highlight {
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin: 1.5em 0;
+  }
+  .page__content code:not(.highlight code) {
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    padding: 0.15em 0.45em;
+    font-size: 0.9em;
+    color: #79b8ff;
+  }
+
+  /* ── Callout boxes: **Gotcha:** / **Pro tip:** ─────────────────────── */
+  .page__content p:has(> strong:first-child) {
+    background: rgba(121,184,255,0.05);
+    border-left: 3px solid rgba(121,184,255,0.3);
+    border-radius: 0 6px 6px 0;
+    padding: 0.6em 1em;
+    margin: 1.2em 0;
+  }
+
+  /* ── Key Takeaway section highlight ────────────────────────────────── */
+  .page__content hr + p > strong:first-child {
+    color: #79b8ff;
+    font-size: 1.05em;
+  }
+
+  /* ── Difficulty badge ───────────────────────────────────────────────── */
+  .page__content p:first-of-type strong {
+    background: rgba(121,184,255,0.1);
+    border-radius: 4px;
+    padding: 0.15em 0.5em;
+    font-size: 0.9em;
   }
 </style>
