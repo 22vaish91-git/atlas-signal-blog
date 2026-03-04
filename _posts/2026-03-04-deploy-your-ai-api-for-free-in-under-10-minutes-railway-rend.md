@@ -57,8 +57,7 @@ First, let's create a minimal FastAPI application that calls OpenAI's API. Creat
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, let's create a minimal FastAPI application that calls OpenAI's API. Create a new directory and these files:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
