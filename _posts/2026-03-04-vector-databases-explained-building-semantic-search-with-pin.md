@@ -4,10 +4,10 @@ title: "Vector Databases Explained: Building Semantic Search with Pinecone, Weav
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "Vector databases have become the backbone of every major AI application in 2026—from ChatGPT's custom instructions to Notion's AI search. According to a re"
 canonical_url: "https://atlassignal.in/posts/vector-databases-explained-building-semantic-search-with-pin/"
 og_title: "Vector Databases Explained: Building Semantic Search with Pinecone, Weaviate, and Chroma"
-og_description: "<ins class='adsbygoogle'"
+og_description: "Vector databases have become the backbone of every major AI application in 2026—from ChatGPT's custom instructions to Notion's AI search. According to a re"
 og_url: "https://atlassignal.in/posts/vector-databases-explained-building-semantic-search-with-pin/"
 og_image: "https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -67,7 +67,9 @@ First, create an account at pinecone.io and grab your API key. Then:
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
