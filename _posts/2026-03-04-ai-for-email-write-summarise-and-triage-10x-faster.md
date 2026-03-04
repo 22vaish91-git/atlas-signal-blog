@@ -4,16 +4,10 @@ title: "AI for Email: Write, Summarise, and Triage 10x Faster"
 date: 2026-03-04
 category: "workflow"
 tags: ["workflow", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster](https://images.pexels.com/photos/30530406/pexels-ph"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster/"
 og_title: "AI for Email: Write, Summarise, and Triage 10x Faster"
-og_description: "**Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster](https://images.pexels.com/photos/30530406/pexels-ph"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster/"
 og_image: "https://images.pexels.com/photos/30530406/pexels-photo-30530406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster](https://images.pexels.com/photos/30530406/pexels-photo-30530406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -60,7 +51,6 @@ The average professional spends 28% of their workday reading and answering email
 ### Step 1: Set Up Your AI Email Environment
 
 First, install the required libraries. We'll use `openai` for AI capabilities and `imaplib` for email access:
-
 
 
 ---
