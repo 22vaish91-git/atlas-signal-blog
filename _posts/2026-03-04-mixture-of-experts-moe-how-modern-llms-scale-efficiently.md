@@ -4,16 +4,10 @@ title: "Mixture of Experts (MoE): How Modern LLMs Scale Efficiently"
 date: 2026-03-04
 category: "concepts"
 tags: ["concepts", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Intermediate | **Category:** Concepts
-
-
-![Mixture of Experts (MoE): How Modern LLMs Scale Efficiently](https://images.unsplash.com/photo-1620712"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/mixture-of-experts-moe-how-modern-llms-scale-efficiently/"
 og_title: "Mixture of Experts (MoE): How Modern LLMs Scale Efficiently"
-og_description: "**Difficulty:** Intermediate | **Category:** Concepts
-
-
-![Mixture of Experts (MoE): How Modern LLMs Scale Efficiently](https://images.unsplash.com/photo-1620712"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/mixture-of-experts-moe-how-modern-llms-scale-efficiently/"
 og_image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Intermediate | **Category:** Concepts
-
-
-![Mixture of Experts (MoE): How Modern LLMs Scale Efficiently](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80)
 
 
 <ins class="adsbygoogle"
@@ -70,7 +61,6 @@ Traditional "dense" models like GPT-3 (175B parameters) activate *every* paramet
 ### Step 2: The Router Network—Traffic Control for Tokens
 
 The router is a small neural network (typically a linear layer + softmax) that decides which experts process each token. For every token embedding, the router outputs a probability distribution across all experts.
-
 
 
 ---
