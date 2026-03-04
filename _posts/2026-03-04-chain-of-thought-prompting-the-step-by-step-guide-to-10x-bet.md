@@ -4,10 +4,10 @@ title: "Chain-of-Thought Prompting: The Step-by-Step Guide to 10x Better AI Reas
 date: 2026-03-04
 category: "prompt_eng"
 tags: ["prompt_eng", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "A recent analysis of GPT-4 and Claude 3.5 Sonnet showed that chain-of-thought CoT prompting improved accuracy on complex reasoning tasks by 67% compared to"
 canonical_url: "https://atlassignal.in/posts/chain-of-thought-prompting-the-step-by-step-guide-to-10x-bet/"
 og_title: "Chain-of-Thought Prompting: The Step-by-Step Guide to 10x Better AI Reasoning"
-og_description: "<ins class='adsbygoogle'"
+og_description: "A recent analysis of GPT-4 and Claude 3.5 Sonnet showed that chain-of-thought CoT prompting improved accuracy on complex reasoning tasks by 67% compared to"
 og_url: "https://atlassignal.in/posts/chain-of-thought-prompting-the-step-by-step-guide-to-10x-bet/"
 og_image: "https://images.pexels.com/photos/33796884/pexels-photo-33796884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -70,7 +70,9 @@ The simplest CoT trigger is adding "Let's think step by step" or "Let's approach
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
