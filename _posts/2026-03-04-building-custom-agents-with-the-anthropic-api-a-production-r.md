@@ -68,8 +68,7 @@ Anthropic uses a specific JSON schema format for tools. Here's how to structure 
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Anthropic uses a specific JSON schema format for tools. Here's how to structure them:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
