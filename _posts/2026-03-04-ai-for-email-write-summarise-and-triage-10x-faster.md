@@ -4,10 +4,10 @@ title: "AI for Email: Write, Summarise, and Triage 10x Faster"
 date: 2026-03-04
 category: "workflow"
 tags: ["workflow", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "The average professional spends 28% of their workday reading and answering emails—that's 2.6 hours daily, or 13 hours weekly. With AI assistants now capabl"
 canonical_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster/"
 og_title: "AI for Email: Write, Summarise, and Triage 10x Faster"
-og_description: "<ins class='adsbygoogle'"
+og_description: "The average professional spends 28% of their workday reading and answering emails—that's 2.6 hours daily, or 13 hours weekly. With AI assistants now capabl"
 og_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster/"
 og_image: "https://images.pexels.com/photos/30530406/pexels-photo-30530406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -55,7 +55,9 @@ First, install the required libraries. We'll use `openai` for AI capabilities an
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
