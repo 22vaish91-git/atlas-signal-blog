@@ -81,8 +81,7 @@ Create a dedicated ChatGPT, Claude, or Gemini conversation titled "Email Assista
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Create a dedicated ChatGPT, Claude, or Gemini conversation titled "Email Assistant." Start with this system prompt:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
