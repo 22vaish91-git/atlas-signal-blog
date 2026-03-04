@@ -4,10 +4,10 @@ title: "AI Code Review: Automate PR Reviews with Claude in 30 Minutes"
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "Developers spend an average of 5-7 hours per week reviewing pull requests, and 60% of code review comments catch style issues rather than critical bugs. Wi"
 canonical_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-in-30-minutes/"
 og_title: "AI Code Review: Automate PR Reviews with Claude in 30 Minutes"
-og_description: "<ins class='adsbygoogle'"
+og_description: "Developers spend an average of 5-7 hours per week reviewing pull requests, and 60% of code review comments catch style issues rather than critical bugs. Wi"
 og_url: "https://atlassignal.in/posts/ai-code-review-automate-pr-reviews-with-claude-in-30-minutes/"
 og_image: "https://images.pexels.com/photos/29393022/pexels-photo-29393022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -57,7 +57,9 @@ First, create a new directory for your code review automation and install the re
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
