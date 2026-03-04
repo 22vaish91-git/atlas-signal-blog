@@ -57,8 +57,7 @@ The first line of defense is clearly separating user input from system instructi
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Why it works: Delimiters make it explicit to the model what's user content versus trusted instructions, reducing confusion attacks.
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
