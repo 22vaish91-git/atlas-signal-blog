@@ -4,10 +4,10 @@ title: "AI for Email: Write, Summarise, and Triage 10x Faster in 2026"
 date: 2026-03-04
 category: "workflow"
 tags: ["workflow", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "The average knowledge worker spends 28% of their workday managing email—that's 2.6 hours daily, or 13 hours per week lost to inbox management. With AI emai"
 canonical_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster-in-2026/"
 og_title: "AI for Email: Write, Summarise, and Triage 10x Faster in 2026"
-og_description: "<ins class='adsbygoogle'"
+og_description: "The average knowledge worker spends 28% of their workday managing email—that's 2.6 hours daily, or 13 hours per week lost to inbox management. With AI emai"
 og_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster-in-2026/"
 og_image: "https://images.pexels.com/photos/16461434/pexels-photo-16461434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -81,7 +81,9 @@ Create a dedicated ChatGPT, Claude, or Gemini conversation titled "Email Assista
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
