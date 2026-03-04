@@ -63,6 +63,12 @@ AUKUS is building a semiconductor fortress disguised as a submarine deal, creati
 
 ---
 
+
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
+
 ## 📧 Get Daily AI & Macro Intelligence
 
 Stay ahead of market-moving news, emerging tech, and global shifts.
