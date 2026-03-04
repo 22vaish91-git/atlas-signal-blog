@@ -67,8 +67,7 @@ First, create an account at pinecone.io and grab your API key. Then:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, create an account at pinecone.io and grab your API key. Then:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
