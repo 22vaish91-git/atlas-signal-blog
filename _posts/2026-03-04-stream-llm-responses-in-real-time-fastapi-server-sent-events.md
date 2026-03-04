@@ -57,8 +57,7 @@ First, set up your Python environment with the necessary packages:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, set up your Python environment with the necessary packages:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
