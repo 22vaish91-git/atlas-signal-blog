@@ -79,14 +79,7 @@ The most dangerous scenario is the one markets aren't pricing: a liquidity crisi
 The passive investing revolution has created a market structure where nearly half of equity capital moves mechanically, without regard to price or value, systematically degrading the price discovery mechanism that makes markets efficient. This isn't a distant theoretical concern—the feedback loops are already visible in elevated valuations, increased concentration risk, and rising volatility, with regulatory intervention and potential market structure crises likely within 12 months as passive assets cross the 50% threshold.
 
 ---
-**Key Takeaway:** ---
-
-
-
----
-
-*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
-
+**Key Takeaway:** The passive investing revolution has created a market structure where nearly half of equity capital moves mechanically, without regard to price or value, systematically degrading the price discovery mechanism that makes markets efficient. This isn't a distant theoretical concern—
 ## 📧 Get Daily AI & Macro Intelligence
 
 Stay ahead of market-moving news, emerging tech, and global shifts.
