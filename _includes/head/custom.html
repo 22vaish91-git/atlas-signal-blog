@@ -411,4 +411,70 @@ a.site-title{
   .page__content h2{font-size:1.28rem !important;}
   .page__hero--overlay{min-height:280px !important;}
 }
+
+/* ── AdSense unit styling ── blend with dark theme ───────────────────────── */
+.as-ad-unit{
+  background:var(--s2);
+  border:1px solid var(--bd);
+  border-radius:var(--r);
+  padding:.5em;
+  margin:2em auto;
+  text-align:center;
+  overflow:hidden;
+  max-width:100%;
+}
+.as-ad-unit ins.adsbygoogle{
+  display:block;
+  border-radius:var(--rs);
+  overflow:hidden;
+}
+.as-ad-label{
+  font-size:.65rem;
+  color:var(--tx-d);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:.35em;
+}
+@media(max-width:768px){
+  .as-ad-unit{padding:.3em; margin:1.4em auto;}
+}
 </style>
+
+<!-- ── Google AdSense auto-ads (publisher: ca-pub-4050224762660800) ────────
+     Auto-ads enabled — Google places units automatically across all pages.
+     In-article unit below provides an additional manual placement on posts.
+──────────────────────────────────────────────────────────────────────────── -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4050224762660800"
+     crossorigin="anonymous"></script>
+
+<script>
+// ── Inject a single in-article ad unit after the first <h2> in blog posts ──
+// Only runs on post pages (URL contains /posts/)
+(function(){
+  if(!window.location.pathname.match(/\/posts\//)) return;
+  document.addEventListener("DOMContentLoaded", function(){
+    var content = document.querySelector(".page__content");
+    if(!content) return;
+    var headings = content.querySelectorAll("h2, h3");
+    // Insert after the SECOND heading (past the intro section)
+    var insertAfter = headings.length >= 2 ? headings[1] : headings[0];
+    if(!insertAfter) return;
+
+    var adWrapper = document.createElement("div");
+    adWrapper.className = "as-ad-unit";
+    adWrapper.innerHTML =
+      '<p class="as-ad-label">Advertisement</p>' +
+      '<ins class="adsbygoogle"' +
+      '     style="display:block;text-align:center;"' +
+      '     data-ad-layout="in-article"' +
+      '     data-ad-format="fluid"' +
+      '     data-ad-client="ca-pub-4050224762660800"' +
+      '     data-ad-slot="YYYYYYYYYY"></ins>';  // TODO: replace YYYYYYYYYY — AdSense dashboard -> Ads -> By ad unit -> In-article -> slot ID
+
+    insertAfter.parentNode.insertBefore(adWrapper, insertAfter.nextSibling);
+
+    // Push the ad unit to AdSense
+    try{ (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+  });
+})();
+</script>
