@@ -70,8 +70,7 @@ The simplest CoT trigger is adding "Let's think step by step" or "Let's approach
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** The simplest CoT trigger is adding "Let's think step by step" or "Let's approach this systematically" to your prompt. This was discovered in the 2022 Kojima et al. paper and remains remarkably effective.
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
