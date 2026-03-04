@@ -54,3 +54,7 @@ The structural innovation enabling ETF wrappers involves three mechanisms: (1) h
 ---
 
 *Published by [AtlasSignal](https://22vaish91-git.github.io/atlas-signal-blog) — AI-powered news intelligence*
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
