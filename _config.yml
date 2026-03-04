@@ -1,7 +1,7 @@
 # ── Site Settings ─────────────────────────────────────────────────────────────
 title: "AtlasSignal"
-subtitle: "AI-Powered News Intelligence"
-description: "Deep research, market signals, and global analysis — powered by AI"
+subtitle: "News Intelligence"
+description: "Deep research, market signals, and global analysis"
 url: "https://atlassignal.in"
 baseurl: ""
 repository: "22vaish91-git/atlas-signal-blog"
@@ -37,7 +37,7 @@ paginate_path: /page:num/
 author:
   name: "AtlasSignal"
   avatar: "/assets/images/header.png"
-  bio: "AI-powered news intelligence — cutting through noise to deliver the signals that matter."
+  bio: "News intelligence — cutting through noise to deliver the signals that matter."
   email: "atlassignal.ai@gmail.com"
   links:
     - label: "Twitter"
