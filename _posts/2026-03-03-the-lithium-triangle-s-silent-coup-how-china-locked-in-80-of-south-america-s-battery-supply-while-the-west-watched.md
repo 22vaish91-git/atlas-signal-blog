@@ -94,6 +94,12 @@ China didn't win the lithium wars through resource nationalism or military coerc
 
 ---
 
+
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
+
 ## 📧 Get Daily AI & Macro Intelligence
 
 Stay ahead of market-moving news, emerging tech, and global shifts.
