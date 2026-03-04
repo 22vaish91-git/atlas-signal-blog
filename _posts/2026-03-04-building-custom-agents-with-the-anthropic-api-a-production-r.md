@@ -4,16 +4,10 @@ title: "Building Custom Agents with the Anthropic API: A Production-Ready Guide"
 date: 2026-03-04
 category: "ai_tools"
 tags: ["ai_tools", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Advanced | **Category:** Ai Tools
-
-
-![Building Custom Agents with the Anthropic API: A Production-Ready Guide](https://images.pexels.com/photos/"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/building-custom-agents-with-the-anthropic-api-a-production-r/"
 og_title: "Building Custom Agents with the Anthropic API: A Production-Ready Guide"
-og_description: "**Difficulty:** Advanced | **Category:** Ai Tools
-
-
-![Building Custom Agents with the Anthropic API: A Production-Ready Guide](https://images.pexels.com/photos/"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/building-custom-agents-with-the-anthropic-api-a-production-r/"
 og_image: "https://images.pexels.com/photos/7709114/pexels-photo-7709114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Advanced | **Category:** Ai Tools
-
-
-![Building Custom Agents with the Anthropic API: A Production-Ready Guide](https://images.pexels.com/photos/7709114/pexels-photo-7709114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -73,7 +64,6 @@ For our research agent, we'll create three tools:
 ### Step 2: Define Tools Using Anthropic's Schema Format
 
 Anthropic uses a specific JSON schema format for tools. Here's how to structure them:
-
 
 
 ---
