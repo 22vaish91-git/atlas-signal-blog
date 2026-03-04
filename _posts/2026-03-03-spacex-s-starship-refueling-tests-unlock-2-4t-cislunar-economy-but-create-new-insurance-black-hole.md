@@ -55,6 +55,12 @@ Key Takeaway: SpaceX's orbital refueling demonstration didn't just advance the A
 
 ---
 
+
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
+
 ## 📧 Get Daily AI & Macro Intelligence
 
 Stay ahead of market-moving news, emerging tech, and global shifts.
