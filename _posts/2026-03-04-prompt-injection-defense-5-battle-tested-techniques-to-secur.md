@@ -4,16 +4,10 @@ title: "Prompt Injection Defense: 5 Battle-Tested Techniques to Secure Your LLM 
 date: 2026-03-04
 category: "prompt_eng"
 tags: ["prompt_eng", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Advanced | **Category:** Prompt Eng
-
-
-![Prompt Injection Defense: 5 Battle-Tested Techniques to Secure Your LLM Applications](https://images.pex"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/prompt-injection-defense-5-battle-tested-techniques-to-secur/"
 og_title: "Prompt Injection Defense: 5 Battle-Tested Techniques to Secure Your LLM Applications"
-og_description: "**Difficulty:** Advanced | **Category:** Prompt Eng
-
-
-![Prompt Injection Defense: 5 Battle-Tested Techniques to Secure Your LLM Applications](https://images.pex"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/prompt-injection-defense-5-battle-tested-techniques-to-secur/"
 og_image: "https://images.pexels.com/photos/17887855/pexels-photo-17887855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Advanced | **Category:** Prompt Eng
-
-
-![Prompt Injection Defense: 5 Battle-Tested Techniques to Secure Your LLM Applications](https://images.pexels.com/photos/17887855/pexels-photo-17887855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -62,7 +53,6 @@ Before diving in, you should have:
 The first line of defense is clearly separating user input from system instructions using XML-style or special delimiters.
 
 **Why it works:** Delimiters make it explicit to the model what's user content versus trusted instructions, reducing confusion attacks.
-
 
 
 ---
