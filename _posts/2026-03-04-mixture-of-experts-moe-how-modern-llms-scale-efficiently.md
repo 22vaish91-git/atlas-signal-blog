@@ -65,8 +65,7 @@ The router is a small neural network (typically a linear layer + softmax) that d
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** The router is a small neural network (typically a linear layer + softmax) that decides which experts process each token. For every token embedding, the router outputs a probability distribution across all experts.
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
