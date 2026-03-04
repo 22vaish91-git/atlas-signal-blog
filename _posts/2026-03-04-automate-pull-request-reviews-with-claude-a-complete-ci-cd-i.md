@@ -4,16 +4,10 @@ title: "Automate Pull Request Reviews with Claude: A Complete CI/CD Integration 
 date: 2026-03-04
 category: "coding"
 tags: ["coding", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![Automate Pull Request Reviews with Claude: A Complete CI/CD Integration Guide](https://images.unsplash.c"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/automate-pull-request-reviews-with-claude-a-complete-ci-cd-i/"
 og_title: "Automate Pull Request Reviews with Claude: A Complete CI/CD Integration Guide"
-og_description: "**Difficulty:** Intermediate | **Category:** Coding
-
-
-![Automate Pull Request Reviews with Claude: A Complete CI/CD Integration Guide](https://images.unsplash.c"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/automate-pull-request-reviews-with-claude-a-complete-ci-cd-i/"
 og_image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Intermediate | **Category:** Coding
-
-
-![Automate Pull Request Reviews with Claude: A Complete CI/CD Integration Guide](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80)
 
 
 <ins class="adsbygoogle"
@@ -71,7 +62,6 @@ Navigate to your repository → Settings → Secrets and variables → Actions �
 ### Step 2: Create the Review Script
 
 Create a new file `scripts/ai_review.py` in your repository. This script will analyze the PR diff and generate review comments:
-
 
 
 ---
