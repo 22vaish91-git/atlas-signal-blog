@@ -83,14 +83,23 @@ html{scroll-behavior:smooth;}
   padding:0 1.5em !important;
 }
 
-/* LOGO — let theme render naturally, just add polish */
+/* LOGO — header.png cropped square in nav */
 .greedy-nav a.site-logo {
   margin-right: .5rem !important;
 }
 .greedy-nav .site-logo img,
 a.site-logo img {
+  width: 40px !important;
+  height: 40px !important;
+  max-height: 40px !important;
+  min-width: 40px !important;
+  object-fit: cover !important;
+  object-position: center !important;
   border-radius: 6px !important;
   box-shadow: 0 0 10px rgba(59,130,246,.35) !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Site title & subtitle */
@@ -306,7 +315,12 @@ a.site-title{
 
 /* AUTHOR SIDEBAR */
 .author__avatar img{
-  border-radius:50% !important;
+  width: 110px !important;
+  height: 110px !important;
+  max-width: 110px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
   border:1px solid var(--bd2) !important;
   box-shadow:0 2px 14px rgba(0,0,0,.5) !important;
 }
