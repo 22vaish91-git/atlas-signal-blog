@@ -4,16 +4,10 @@ title: "AI for Email: Write, Summarise, and Triage 10x Faster in 2026"
 date: 2026-03-04
 category: "workflow"
 tags: ["workflow", "atlas-signal", "deep-research"]
-description: "**Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster in 2026](https://images.pexels.com/photos/16461434/p"
+description: "<ins class='adsbygoogle'"
 canonical_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster-in-2026/"
 og_title: "AI for Email: Write, Summarise, and Triage 10x Faster in 2026"
-og_description: "**Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster in 2026](https://images.pexels.com/photos/16461434/p"
+og_description: "<ins class='adsbygoogle'"
 og_url: "https://atlassignal.in/posts/ai-for-email-write-summarise-and-triage-10x-faster-in-2026/"
 og_image: "https://images.pexels.com/photos/16461434/pexels-photo-16461434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -28,9 +22,6 @@ toc_sticky: true
 
 
 **Difficulty:** Beginner | **Category:** Workflow
-
-
-![AI for Email: Write, Summarise, and Triage 10x Faster in 2026](https://images.pexels.com/photos/16461434/pexels-photo-16461434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
 
 <ins class="adsbygoogle"
@@ -86,7 +77,6 @@ For this tutorial, we'll focus on **Option B** since it's free to start, works w
 ### Step 2: Set Up Your AI Writing System
 
 Create a dedicated ChatGPT, Claude, or Gemini conversation titled "Email Assistant." Start with this system prompt:
-
 
 
 ---
