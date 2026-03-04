@@ -57,8 +57,7 @@ First, create a new directory for your code review automation and install the re
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** First, create a new directory for your code review automation and install the required dependencies:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
