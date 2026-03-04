@@ -4,10 +4,10 @@ title: "AI Product Management: Building Beyond the GPT Wrapper"
 date: 2026-03-04
 category: "career"
 tags: ["career", "atlas-signal", "deep-research"]
-description: "<ins class='adsbygoogle'"
+description: "87% of AI startups launched in 2024-2025 are essentially wrappers around OpenAI or Anthropic APIs, and 73% will be obsolete within 18 months according to a"
 canonical_url: "https://atlassignal.in/posts/ai-product-management-building-beyond-the-gpt-wrapper/"
 og_title: "AI Product Management: Building Beyond the GPT Wrapper"
-og_description: "<ins class='adsbygoogle'"
+og_description: "87% of AI startups launched in 2024-2025 are essentially wrappers around OpenAI or Anthropic APIs, and 73% will be obsolete within 18 months according to a"
 og_url: "https://atlassignal.in/posts/ai-product-management-building-beyond-the-gpt-wrapper/"
 og_image: "https://images.pexels.com/photos/30530407/pexels-photo-30530407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 header:
@@ -70,7 +70,9 @@ Most AI PMs ship features, watch qualitative feedback, and hope for the best. Pr
 
 ---
 
-**Key Takeaway:** 
+**Key Takeaway:** ---
+
+*New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
 
