@@ -167,8 +167,7 @@ Once comfortable with basics, try these:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Gotcha: There's no direct "share link" feature yet. You need to share the code or recreate it by sharing your prompts with others.
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
