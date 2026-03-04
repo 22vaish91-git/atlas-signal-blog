@@ -67,8 +67,7 @@ Let's build a simple filesystem MCP server using Python:
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Let's build a simple filesystem MCP server using Python:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
