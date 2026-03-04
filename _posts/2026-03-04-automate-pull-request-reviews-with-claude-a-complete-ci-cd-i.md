@@ -66,8 +66,7 @@ Create a new file `scripts/ai_review.py` in your repository. This script will an
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Create a new file scripts/ai_review.py in your repository. This script will analyze the PR diff and generate review comments:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
