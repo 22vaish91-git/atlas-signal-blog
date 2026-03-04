@@ -35,3 +35,7 @@ Within 90 days, Treasury curve inversion should normalize if the cut successfull
 ---
 
 *Published by [AtlasSignal](https://22vaish91-git.github.io/atlas-signal-blog) — AI-powered news intelligence*
+
+---
+
+*Deep research published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
