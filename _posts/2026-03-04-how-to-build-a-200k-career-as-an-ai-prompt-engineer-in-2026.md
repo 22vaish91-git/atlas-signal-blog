@@ -55,8 +55,7 @@ The difference between junior and senior prompt engineers is reliability. Enterp
 
 ---
 
-**Key Takeaway:** ---
-
+**Key Takeaway:** Specific instruction: Always use JSON mode or structured output features:
 *New AI tutorials published daily on [AtlasSignal](https://atlassignal.in). Follow [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk) for more.*
 
 ---
