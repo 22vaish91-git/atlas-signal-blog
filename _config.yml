@@ -40,9 +40,9 @@ author:
   bio: "News intelligence — cutting through noise to deliver the signals that matter."
   email: "atlassignal.ai@gmail.com"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/AtlasSignalDesk"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/AtlasSignalDesk"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://atlassignal.in"
@@ -53,12 +53,9 @@ author:
 # ── Footer ────────────────────────────────────────────────────────────────────
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/AtlasSignalDesk"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/22vaish91-git"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/AtlasSignalDesk"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:atlassignal.ai@gmail.com"
@@ -74,7 +71,7 @@ social:
   type: Organization
   name: AtlasSignal
   links:
-    - "https://twitter.com/AtlasSignalDesk"
+    - "https://x.com/AtlasSignalDesk"
 
 # ── Post defaults ─────────────────────────────────────────────────────────────
 defaults:
