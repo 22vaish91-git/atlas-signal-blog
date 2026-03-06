@@ -57,3 +57,129 @@ header:
 <p>For inquiries, partnerships, or feedback:<br>
 📧 <a href="mailto:atlassignal.ai@gmail.com">atlassignal.ai@gmail.com</a><br>
 𝕏 <a href="https://x.com/AtlasSignalDesk">@AtlasSignalDesk on X</a></p>
+
+---
+
+<!-- Newsletter Subscribe Section -->
+<div id="subscribe-section" style="
+  background: linear-gradient(135deg, rgba(231,76,60,0.08) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid rgba(231,76,60,0.25);
+  border-radius: 12px;
+  padding: 2em 2.2em;
+  margin: 2.5em 0 1.5em;
+">
+  <h2 style="margin-top: 0; font-size: 1.3em; color: #e6edf3;">
+    📬 Intelligence Delivered to Your Inbox
+  </h2>
+  <p style="color: #8b949e; font-size: 0.95em; margin-bottom: 1.5em; line-height: 1.65;">
+    Subscribe to receive AtlasSignal's deep-research reports the moment they're published —
+    no noise, no algorithm, just the signals that matter.
+    <strong style="color: #e6edf3;">Unsubscribe any time.</strong>
+  </p>
+
+  <!-- Subscribe form — POSTs to atlas-signal-api Lambda -->
+  <form id="subscribe-form"
+        data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}/subscribe"
+        style="display: flex; flex-direction: column; gap: 0.9em; max-width: 460px;">
+    <input
+      type="text"
+      id="sub-name"
+      name="name"
+      placeholder="Your name (optional)"
+      autocomplete="name"
+      style="
+        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 8px; padding: 0.7em 1em; color: #e6edf3; font-size: 0.9em;
+        outline: none; transition: border-color 0.2s;
+      "
+    >
+    <input
+      type="email"
+      id="sub-email"
+      name="email"
+      placeholder="your@email.com"
+      required
+      autocomplete="email"
+      style="
+        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 8px; padding: 0.7em 1em; color: #e6edf3; font-size: 0.9em;
+        outline: none; transition: border-color 0.2s;
+      "
+    >
+    <button
+      type="submit"
+      id="sub-btn"
+      style="
+        background: #e74c3c; color: #fff; border: none; border-radius: 8px;
+        padding: 0.75em 1.6em; font-size: 0.92em; font-weight: 700;
+        cursor: pointer; letter-spacing: 0.4px; transition: background 0.2s;
+        align-self: flex-start;
+      "
+    >
+      Subscribe — It's Free
+    </button>
+  </form>
+
+  <!-- Status message (shown after submission) -->
+  <div id="sub-status" style="display: none; margin-top: 1em; font-size: 0.9em; line-height: 1.5;"></div>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('subscribe-form');
+  if (!form) return;
+
+  // Focus styles
+  ['sub-name', 'sub-email'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('focus',  function () { el.style.borderColor = 'rgba(231,76,60,0.6)'; });
+    el.addEventListener('blur',   function () { el.style.borderColor = 'rgba(255,255,255,0.12)'; });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn    = document.getElementById('sub-btn');
+    var status = document.getElementById('sub-status');
+    var email  = (document.getElementById('sub-email').value || '').trim();
+    var name   = (document.getElementById('sub-name').value  || '').trim();
+    var apiUrl = form.getAttribute('data-api-url');
+
+    if (!email) { return; }
+
+    btn.disabled    = true;
+    btn.textContent = 'Subscribing…';
+    status.style.display = 'none';
+
+    fetch(apiUrl, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: email, name: name }),
+    })
+    .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, data: d }; }); })
+    .then(function (r) {
+      status.style.display = 'block';
+      if (r.ok) {
+        var already = r.data.status === 'already_subscribed';
+        status.style.color = already ? '#8b949e' : '#2ecc71';
+        status.innerHTML   = already
+          ? '✓ You are already subscribed. Check your inbox for future reports.'
+          : '🎉 <strong>Subscribed!</strong> You\'ll receive the next intelligence report in your inbox.';
+        form.reset();
+      } else {
+        status.style.color   = '#e74c3c';
+        status.textContent   = '⚠ ' + (r.data.detail || 'Something went wrong — please try again.');
+      }
+      btn.disabled    = false;
+      btn.textContent = 'Subscribe — It\'s Free';
+    })
+    .catch(function (err) {
+      status.style.display = 'block';
+      status.style.color   = '#e74c3c';
+      status.textContent   = '⚠ Network error — please try again shortly.';
+      btn.disabled    = false;
+      btn.textContent = 'Subscribe — It\'s Free';
+    });
+  });
+})();
+</script>

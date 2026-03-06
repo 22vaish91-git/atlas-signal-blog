@@ -7,6 +7,11 @@ baseurl: ""
 repository: "22vaish91-git/atlas-signal-blog"
 logo: "/assets/images/header.png"
 
+# ── API / Backend ─────────────────────────────────────────────────────────────
+# Lambda Function URL for atlas-signal-api (FastAPI + Mangum).
+# Update this when the Function URL changes (check AWS console → atlas-signal-api → Configuration → Function URL).
+api_base_url: "https://atlassignal.in"  # TODO: replace with actual Lambda Function URL or API Gateway URL
+
 # ── Theme ─────────────────────────────────────────────────────────────────────
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark"       # dark skin for intelligence/tech aesthetic
