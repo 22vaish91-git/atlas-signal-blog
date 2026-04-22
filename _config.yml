@@ -58,12 +58,9 @@ author:
     - label: "X"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/AtlasSignalDesk"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://atlassignal.in"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:atlassignal.ai@gmail.com"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCSdsK1wfTmUyHzZXX_rt2aQ"
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 footer:
@@ -71,6 +68,9 @@ footer:
     - label: "X"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/AtlasSignalDesk"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCSdsK1wfTmUyHzZXX_rt2aQ"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:atlassignal.ai@gmail.com"
