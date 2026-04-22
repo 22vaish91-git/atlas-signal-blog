@@ -10,7 +10,17 @@ logo: "/assets/images/header.png"
 # ── API / Backend ─────────────────────────────────────────────────────────────
 # Lambda Function URL for atlas-signal-api (FastAPI + Mangum).
 # Update this when the Function URL changes (check AWS console → atlas-signal-api → Configuration → Function URL).
-api_base_url: "https://atlassignal.in"  # TODO: replace with actual Lambda Function URL or API Gateway URL
+api_base_url: "https://vz8hhibmqg.execute-api.us-east-1.amazonaws.com"
+
+# ── Monetisation / AdSense ───────────────────────────────────────────────────
+# `publisher_id` is your AdSense account ID (ca-pub-...).
+# `in_article_slot` is the numeric slot ID from AdSense -> Ads -> By ad unit -> Get code.
+# Leave the slot blank until the site is approved; auto ads can still run.
+adsense:
+  enabled: true
+  publisher_id: "ca-pub-4050224762660800"
+  in_article_slot: ""
+  inject_after_paragraph: 2
 
 # ── Theme ─────────────────────────────────────────────────────────────────────
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"

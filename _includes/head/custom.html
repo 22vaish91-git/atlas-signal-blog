@@ -1,3 +1,8 @@
+{% assign adsense_enabled = site.adsense.enabled | default: false %}
+{% assign adsense_publisher_id = site.adsense.publisher_id | default: '' %}
+{% assign adsense_in_article_slot = site.adsense.in_article_slot | default: '' %}
+{% assign adsense_inject_after_paragraph = site.adsense.inject_after_paragraph | default: 2 %}
+
 <!-- ===================================================================
      AtlasSignal Premium Design System 2026
      Inter + Space Grotesk | Reading-progress | Glassmorphism nav
@@ -370,6 +375,74 @@ a.site-title{
 .as-btn-email{background:var(--acc) !important;color:#fff !important;}
 .as-btn-email:hover{background:#2563eb !important;color:#fff !important;}
 
+/* GENERATED NEWSLETTER CAPTURE */
+.email-capture{
+  position:relative;
+  margin:2.4em 0 1.6em;
+  padding:1.35em;
+  border:1px solid rgba(96,165,250,.18);
+  border-radius:var(--r);
+  background:
+    radial-gradient(circle at top right, rgba(96,165,250,.12), transparent 28%),
+    linear-gradient(135deg, rgba(13,17,23,.96), rgba(22,27,34,.92));
+  box-shadow:0 12px 40px rgba(0,0,0,.28);
+}
+.email-capture::before{
+  content:"Newsletter";
+  display:inline-block;
+  margin-bottom:.9em;
+  padding:.24em .7em;
+  border:1px solid rgba(96,165,250,.22);
+  border-radius:999px;
+  color:#93c5fd;
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.email-capture-form{
+  display:flex;
+  gap:.75em;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.email-capture-form input[type="email"]{
+  flex:1 1 260px;
+  min-height:48px;
+  padding:.85em 1em;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+  color:var(--tx);
+  font-size:.96rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+}
+.email-capture-form input[type="email"]:focus{
+  outline:none;
+  border-color:rgba(96,165,250,.55);
+  box-shadow:0 0 0 3px rgba(59,130,246,.16);
+}
+.email-capture-form button{
+  min-height:48px;
+  padding:.9em 1.2em;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#2563eb,#60a5fa);
+  color:#fff;
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:700;
+  letter-spacing:.01em;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(37,99,235,.24);
+}
+.email-capture-form button:hover{transform:translateY(-1px);}
+.email-capture-form button:disabled{opacity:.72;cursor:wait;transform:none;}
+.email-capture-status{
+  display:block;
+  margin-top:.8em;
+  font-size:.88rem;
+  color:var(--tx-m);
+}
+
 /* FOOTER */
 .page__footer{background:var(--s1) !important;border-top:1px solid var(--bd) !important;}
 .page__footer-copyright{font-size:.78rem !important;color:var(--tx-d) !important;}
@@ -440,27 +513,27 @@ a.site-title{
 }
 </style>
 
+{% if adsense_enabled and adsense_publisher_id != '' %}
 <!-- Google AdSense site verification -->
-<meta name="google-adsense-account" content="ca-pub-4050224762660800">
+<meta name="google-adsense-account" content="{{ adsense_publisher_id }}">
 
-<!-- ── Google AdSense auto-ads (publisher: ca-pub-4050224762660800) ────────
-     Auto-ads enabled — Google places units automatically across all pages.
-     In-article unit below provides an additional manual placement on posts.
-──────────────────────────────────────────────────────────────────────────── -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4050224762660800"
+<!-- ── Google AdSense auto-ads ───────────────────────────────────────────── -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_publisher_id }}"
      crossorigin="anonymous"></script>
 
+{% if adsense_in_article_slot != '' %}
 <script>
-// ── Inject a single in-article ad unit after the first <h2> in blog posts ──
-// Only runs on post pages (URL contains /posts/)
+// ── Inject a single in-article ad after the configured paragraph on post pages ──
 (function(){
   if(!window.location.pathname.match(/\/posts\//)) return;
   document.addEventListener("DOMContentLoaded", function(){
     var content = document.querySelector(".page__content");
-    if(!content) return;
-    var headings = content.querySelectorAll("h2, h3");
-    // Insert after the SECOND heading (past the intro section)
-    var insertAfter = headings.length >= 2 ? headings[1] : headings[0];
+    if(!content || content.querySelector(".as-ad-unit")) return;
+
+    var paragraphs = Array.prototype.slice.call(content.querySelectorAll("p"))
+      .filter(function(node){ return (node.textContent || '').trim().length > 120; });
+    var afterIndex = Math.max(1, Number("{{ adsense_inject_after_paragraph }}") || 2) - 1;
+    var insertAfter = paragraphs[afterIndex] || paragraphs[paragraphs.length - 1];
     if(!insertAfter) return;
 
     var adWrapper = document.createElement("div");
@@ -471,13 +544,13 @@ a.site-title{
       '     style="display:block;text-align:center;"' +
       '     data-ad-layout="in-article"' +
       '     data-ad-format="fluid"' +
-      '     data-ad-client="ca-pub-4050224762660800"' +
-      '     data-ad-slot="YYYYYYYYYY"></ins>';  // TODO: replace YYYYYYYYYY — AdSense dashboard -> Ads -> By ad unit -> In-article -> slot ID
+      '     data-ad-client="{{ adsense_publisher_id }}"' +
+      '     data-ad-slot="{{ adsense_in_article_slot }}"></ins>';
 
     insertAfter.parentNode.insertBefore(adWrapper, insertAfter.nextSibling);
-
-    // Push the ad unit to AdSense
-    try{ (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
   });
 })();
 </script>
+{% endif %}
+{% endif %}
