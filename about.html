@@ -80,7 +80,7 @@ header:
   <!-- Subscribe form — POSTs to atlas-signal-api Lambda -->
   <form id="subscribe-form"
         data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}/subscribe"
-        style="display: flex; flex-direction: column; gap: 0.9em; max-width: 460px;">
+        style="display: flex; flex-direction: column; gap: 0.9em; max-width: 520px;">
     <input
       type="text"
       id="sub-name"
@@ -106,6 +106,23 @@ header:
         outline: none; transition: border-color 0.2s;
       "
     >
+    <!-- Topic selection (multi-select checkboxes) -->
+    <div style="margin-top:0.2em;">
+      <p style="color:#8b949e;font-size:0.82em;margin:0 0 0.6em;">Choose your topics (select all that apply):</p>
+      <div class="as-topic-grid">
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="AI"> AI</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="Tech"> Tech</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="Space"> Space</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="Health"> Health</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="Sports"> Sports</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="Innovation"> Innovation</label>
+      </div>
+    </div>
+    <!-- Consent (required) -->
+    <label class="as-consent-label">
+      <input type="checkbox" id="sub-consent" required>
+      I agree to receive topic-based updates from AtlasSignal. <span style="color:#6e7681;">(Unsubscribe any time.)</span>
+    </label>
     <button
       type="submit"
       id="sub-btn"
@@ -139,13 +156,24 @@ header:
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var btn    = document.getElementById('sub-btn');
-    var status = document.getElementById('sub-status');
-    var email  = (document.getElementById('sub-email').value || '').trim();
-    var name   = (document.getElementById('sub-name').value  || '').trim();
-    var apiUrl = form.getAttribute('data-api-url');
+    var btn     = document.getElementById('sub-btn');
+    var status  = document.getElementById('sub-status');
+    var email   = (document.getElementById('sub-email').value || '').trim();
+    var name    = (document.getElementById('sub-name').value  || '').trim();
+    var consent = document.getElementById('sub-consent');
+    var apiUrl  = form.getAttribute('data-api-url');
 
-    if (!email) { return; }
+    if (!email) return;
+    if (!consent || !consent.checked) {
+      status.style.display = 'block';
+      status.style.color   = '#e74c3c';
+      status.textContent   = '⚠ Please tick the consent checkbox to subscribe.';
+      return;
+    }
+
+    var topics = Array.prototype.slice.call(
+      form.querySelectorAll('input[name="topics"]:checked')
+    ).map(function (cb) { return cb.value; });
 
     btn.disabled    = true;
     btn.textContent = 'Subscribing…';
@@ -154,7 +182,7 @@ header:
     fetch(apiUrl, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ email: email, name: name }),
+      body:    JSON.stringify({ email: email, name: name, topics: topics, consent: true }),
     })
     .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, data: d }; }); })
     .then(function (r) {
@@ -164,7 +192,7 @@ header:
         status.style.color = already ? '#8b949e' : '#2ecc71';
         status.innerHTML   = already
           ? '✓ You are already subscribed. Check your inbox for future reports.'
-          : '🎉 <strong>Subscribed!</strong> You\'ll receive the next intelligence report in your inbox.';
+          : '🎉 <strong>Subscribed!</strong> Check your inbox to verify your email address.';
         form.reset();
       } else {
         status.style.color   = '#e74c3c';
@@ -173,7 +201,7 @@ header:
       btn.disabled    = false;
       btn.textContent = 'Subscribe — It\'s Free';
     })
-    .catch(function (err) {
+    .catch(function () {
       status.style.display = 'block';
       status.style.color   = '#e74c3c';
       status.textContent   = '⚠ Network error — please try again shortly.';
