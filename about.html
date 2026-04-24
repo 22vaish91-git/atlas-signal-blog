@@ -164,16 +164,24 @@ header:
     var apiUrl  = form.getAttribute('data-api-url');
 
     if (!email) return;
+
+    var topics = Array.prototype.slice.call(
+      form.querySelectorAll('input[name="topics"]:checked')
+    ).map(function (cb) { return cb.value; });
+
+    if (!topics.length) {
+      status.style.display = 'block';
+      status.style.color   = '#e74c3c';
+      status.textContent   = '⚠ Please select at least one topic to subscribe.';
+      return;
+    }
+
     if (!consent || !consent.checked) {
       status.style.display = 'block';
       status.style.color   = '#e74c3c';
       status.textContent   = '⚠ Please tick the consent checkbox to subscribe.';
       return;
     }
-
-    var topics = Array.prototype.slice.call(
-      form.querySelectorAll('input[name="topics"]:checked')
-    ).map(function (cb) { return cb.value; });
 
     btn.disabled    = true;
     btn.textContent = 'Subscribing…';
@@ -192,7 +200,7 @@ header:
         status.style.color = already ? '#8b949e' : '#2ecc71';
         status.innerHTML   = already
           ? '✓ You are already subscribed. Check your inbox for future reports.'
-          : '🎉 <strong>Subscribed!</strong> Check your inbox to verify your email address.';
+          : '🎉 <strong>Almost done!</strong> Check your inbox for a verification email and click the link to activate.';
         form.reset();
       } else {
         status.style.color   = '#e74c3c';
