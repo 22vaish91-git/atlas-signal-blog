@@ -10,7 +10,7 @@ We'd love to hear from you. Whether it's feedback on our analysis, partnership i
 
 📧 **Email**: [atlassignal.ai@gmail.com](mailto:atlassignal.ai@gmail.com)
 
-🐦 **Twitter/X**: [@AtlasSignalDesk](https://twitter.com/AtlasSignalDesk)
+🐦 **Twitter/X**: [@AtlasSignalDesk](https://x.com/AtlasSignalDesk)
 
 ## What We're Open To
 
@@ -21,7 +21,7 @@ We'd love to hear from you. Whether it's feedback on our analysis, partnership i
 
 ## Subscribe
 
-Stay ahead of market-moving news, emerging tech, and global shifts. Follow us on [X (@AtlasSignalDesk)](https://twitter.com/AtlasSignalDesk) for real-time intelligence.
+Stay ahead of market-moving news, emerging tech, and global shifts. Follow us on [X (@AtlasSignalDesk)](https://x.com/AtlasSignalDesk) for real-time intelligence.
 
 ---
 

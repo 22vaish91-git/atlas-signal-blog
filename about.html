@@ -9,213 +9,77 @@ header:
   excerpt: "Cutting through noise to deliver the signals that matter."
 ---
 
-<h2>Our Mission</h2>
-
-<p>AtlasSignal is a global news intelligence desk built for one purpose: <strong>surfacing the signals that move markets, shape policy, and define the future — before they become consensus</strong>.</p>
-
-<p>In an era of information overload, most analysis arrives too late. Our team monitors global events continuously, delivering deep analysis you can act on.</p>
-
-<h2>What We Cover</h2>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2em; margin: 1.5em 0;">
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>🤖 Artificial Intelligence</strong><br>
-    <span style="color: #aaa;">Model releases, research breakthroughs, industry shifts, regulation</span>
+<section class="as-hero-band as-smooth-lift" style="margin:1em 0 1.5em;">
+  <div class="as-hero-copy">
+    <span class="as-eyebrow">About AtlasSignal</span>
+    <h2>We build fast, high-context intelligence for readers who cannot afford to wait for the obvious take.</h2>
+    <p>AtlasSignal exists to turn scattered developments into clean strategic understanding. We focus on the consequences that matter after the headline, not the noise around it.</p>
   </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>💻 Technology</strong><br>
-    <span style="color: #aaa;">Big tech moves, startups, semiconductors, cloud infrastructure</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>📈 Economy &amp; Markets</strong><br>
-    <span style="color: #aaa;">Fed decisions, GDP, inflation, earnings, crypto, commodities</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>🌍 Geopolitics</strong><br>
-    <span style="color: #aaa;">Conflicts, sanctions, trade wars, elections, diplomacy</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>🚀 Science &amp; Space</strong><br>
-    <span style="color: #aaa;">Discoveries, space missions, climate research, physics</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>🔒 Cybersecurity</strong><br>
-    <span style="color: #aaa;">Breaches, zero-days, state-sponsored threats, policy</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>🧬 Biotech &amp; Energy</strong><br>
-    <span style="color: #aaa;">Clinical trials, fusion, renewables, CRISPR, batteries</span>
-  </div>
-  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1em;">
-    <strong>💡 Innovation &amp; Hidden Gems</strong><br>
-    <span style="color: #aaa;">Under-the-radar stories the mainstream misses</span>
-  </div>
-</div>
-
-<h2>Contact</h2>
-
-<p>For inquiries, partnerships, or feedback:<br>
-📧 <a href="mailto:atlassignal.ai@gmail.com">atlassignal.ai@gmail.com</a><br>
-𝕏 <a href="https://x.com/AtlasSignalDesk">@AtlasSignalDesk on X</a></p>
-
----
-
-<!-- Newsletter Subscribe Section -->
-<div id="subscribe-section" style="
-  background: linear-gradient(135deg, rgba(231,76,60,0.08) 0%, rgba(255,255,255,0.03) 100%);
-  border: 1px solid rgba(231,76,60,0.25);
-  border-radius: 12px;
-  padding: 2em 2.2em;
-  margin: 2.5em 0 1.5em;
-">
-  <h2 style="margin-top: 0; font-size: 1.3em; color: #e6edf3;">
-    📬 Intelligence Delivered to Your Inbox
-  </h2>
-  <p style="color: #8b949e; font-size: 0.95em; margin-bottom: 1.5em; line-height: 1.65;">
-    Subscribe to receive AtlasSignal's deep-research reports the moment they're published —
-    no noise, no algorithm, just the signals that matter.
-    <strong style="color: #e6edf3;">Unsubscribe any time.</strong>
-  </p>
-
-  <!-- Subscribe form — POSTs to atlas-signal-api Lambda -->
-  <form id="subscribe-form"
-        data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}/subscribe"
-        style="display: flex; flex-direction: column; gap: 0.9em; max-width: 520px;">
-    <input
-      type="text"
-      id="sub-name"
-      name="name"
-      placeholder="Your name (optional)"
-      autocomplete="name"
-      style="
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 8px; padding: 0.7em 1em; color: #e6edf3; font-size: 0.9em;
-        outline: none; transition: border-color 0.2s;
-      "
-    >
-    <input
-      type="email"
-      id="sub-email"
-      name="email"
-      placeholder="your@email.com"
-      required
-      autocomplete="email"
-      style="
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 8px; padding: 0.7em 1em; color: #e6edf3; font-size: 0.9em;
-        outline: none; transition: border-color 0.2s;
-      "
-    >
-    <!-- Topic selection (multi-select checkboxes) -->
-    <div style="margin-top:0.2em;">
-      <p style="color:#8b949e;font-size:0.82em;margin:0 0 0.6em;">Choose your topics (select all that apply):</p>
-      <div class="as-topic-grid">
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="AI"> AI</label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Tech"> Tech</label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Space"> Space</label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Health"> Health</label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Sports"> Sports</label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Innovation"> Innovation</label>
-      </div>
+  <div class="as-hero-proof">
+    <div>
+      <strong>Mission</strong>
+      <span>Surface what moves markets, policy, technology, and attention before it hardens into consensus.</span>
     </div>
-    <!-- Consent (required) -->
-    <label class="as-consent-label">
-      <input type="checkbox" id="sub-consent" required>
-      I agree to receive topic-based updates from AtlasSignal. <span style="color:#6e7681;">(Unsubscribe any time.)</span>
-    </label>
-    <button
-      type="submit"
-      id="sub-btn"
-      style="
-        background: #e74c3c; color: #fff; border: none; border-radius: 8px;
-        padding: 0.75em 1.6em; font-size: 0.92em; font-weight: 700;
-        cursor: pointer; letter-spacing: 0.4px; transition: background 0.2s;
-        align-self: flex-start;
-      "
-    >
-      Subscribe — It's Free
-    </button>
-  </form>
+    <div>
+      <strong>Method</strong>
+      <span>Track the event, rank the signal, then publish readable synthesis with clear implications.</span>
+    </div>
+    <div>
+      <strong>Reader fit</strong>
+      <span>Operators, investors, builders, and curious generalists who want substance fast.</span>
+    </div>
+  </div>
+</section>
 
-  <!-- Status message (shown after submission) -->
-  <div id="sub-status" style="display: none; margin-top: 1em; font-size: 0.9em; line-height: 1.5;"></div>
-</div>
+<section class="as-story-panel as-smooth-lift" style="margin:0 0 1.5em;">
+  <div>
+    <span class="as-eyebrow">How the desk thinks</span>
+    <h2>Signal first. Context second. Clarity always.</h2>
+  </div>
+  <p>Most media tells you what happened. AtlasSignal is built to tell you what changed. That means weighing freshness, relevance, strategic impact, and follow-through before a report is published.</p>
+  <p style="margin-bottom:0;">The result is a faster path from event to understanding, without making the reader do the synthesis work alone.</p>
+</section>
 
-<script>
-(function () {
-  var form = document.getElementById('subscribe-form');
-  if (!form) return;
+<section class="as-feature-grid" style="margin:0 0 1.6em;">
+  <article class="as-feature-card as-smooth-lift">
+    <span class="as-card-index">01</span>
+    <h3>Core coverage</h3>
+    <p>AI, technology, macro, geopolitics, space, cybersecurity, biotech, energy, and selected sports narratives where the underlying incentives matter.</p>
+  </article>
+  <article class="as-feature-card as-smooth-lift">
+    <span class="as-card-index">02</span>
+    <h3>Publishing model</h3>
+    <p>Short-form alerts for speed, blog reports for depth, and visual briefings when a topic benefits from faster explanation across channels.</p>
+  </article>
+  <article class="as-feature-card as-smooth-lift">
+    <span class="as-card-index">03</span>
+    <h3>Reader promise</h3>
+    <p>No filler sections, no hype padding, no internal jargon. Just the strongest version of the signal with enough structure to act on it.</p>
+  </article>
+</section>
 
-  // Focus styles
-  ['sub-name', 'sub-email'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.addEventListener('focus',  function () { el.style.borderColor = 'rgba(231,76,60,0.6)'; });
-    el.addEventListener('blur',   function () { el.style.borderColor = 'rgba(255,255,255,0.12)'; });
-  });
+<section class="as-process-grid" style="margin:0 0 1.8em;">
+  <div class="as-process-card as-smooth-lift">
+    <strong>Scan</strong>
+    <span>Track fast-moving developments across the feeds that matter.</span>
+  </div>
+  <div class="as-process-card as-smooth-lift">
+    <strong>Rank</strong>
+    <span>Filter for consequence, novelty, timing, and downstream impact.</span>
+  </div>
+  <div class="as-process-card as-smooth-lift">
+    <strong>Explain</strong>
+    <span>Publish a report that helps readers orient quickly and go deeper only where it matters.</span>
+  </div>
+</section>
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn     = document.getElementById('sub-btn');
-    var status  = document.getElementById('sub-status');
-    var email   = (document.getElementById('sub-email').value || '').trim();
-    var name    = (document.getElementById('sub-name').value  || '').trim();
-    var consent = document.getElementById('sub-consent');
-    var apiUrl  = form.getAttribute('data-api-url');
+<section class="as-story-panel as-smooth-lift" style="margin:0 0 2em;">
+  <div>
+    <span class="as-eyebrow">Contact</span>
+    <h2>Reach the desk</h2>
+  </div>
+  <p>For partnerships, feedback, or intelligence suggestions: <a href="mailto:atlassignal.ai@gmail.com">atlassignal.ai@gmail.com</a>.</p>
+  <p style="margin-bottom:0;">For real-time updates, follow <a href="https://x.com/AtlasSignalDesk" target="_blank" rel="noopener">@AtlasSignalDesk on X</a>.</p>
+</section>
 
-    if (!email) return;
-
-    var topics = Array.prototype.slice.call(
-      form.querySelectorAll('input[name="topics"]:checked')
-    ).map(function (cb) { return cb.value; });
-
-    if (!topics.length) {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = '⚠ Please select at least one topic to subscribe.';
-      return;
-    }
-
-    if (!consent || !consent.checked) {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = '⚠ Please tick the consent checkbox to subscribe.';
-      return;
-    }
-
-    btn.disabled    = true;
-    btn.textContent = 'Subscribing…';
-    status.style.display = 'none';
-
-    fetch(apiUrl, {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ email: email, name: name, topics: topics, consent: true }),
-    })
-    .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, data: d }; }); })
-    .then(function (r) {
-      status.style.display = 'block';
-      if (r.ok) {
-        var already = r.data.status === 'already_subscribed';
-        status.style.color = already ? '#8b949e' : '#2ecc71';
-        status.innerHTML   = already
-          ? '✓ You are already subscribed. Check your inbox for future reports.'
-          : '🎉 <strong>Almost done!</strong> Check your inbox for a verification email and click the link to activate.';
-        form.reset();
-      } else {
-        status.style.color   = '#e74c3c';
-        status.textContent   = '⚠ ' + (r.data.detail || 'Something went wrong — please try again.');
-      }
-      btn.disabled    = false;
-      btn.textContent = 'Subscribe — It\'s Free';
-    })
-    .catch(function () {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = '⚠ Network error — please try again shortly.';
-      btn.disabled    = false;
-      btn.textContent = 'Subscribe — It\'s Free';
-    });
-  });
-})();
-</script>
+{% include subscribe_widget.html %}
