@@ -23,7 +23,7 @@
 
     <form id="subscribe-form"
           data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}/subscribe"
-          style="display:flex; flex-direction:column; gap:0.9em; max-width:600px;">
+          style="display:flex; flex-direction:column; gap:0.9em; max-width:680px; width:100%; min-width:0;">
     <input
       type="text"
       id="sub-name"
@@ -59,6 +59,7 @@
         <label class="as-topic-label"><input type="checkbox" name="topics" value="Health"> Health</label>
         <label class="as-topic-label"><input type="checkbox" name="topics" value="Sports"> Sports</label>
         <label class="as-topic-label"><input type="checkbox" name="topics" value="Innovation"> Innovation</label>
+        <label class="as-topic-label"><input type="checkbox" name="topics" value="General"> General</label>
       </div>
     </div>
 

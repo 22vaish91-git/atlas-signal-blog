@@ -95,24 +95,24 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false
       share: true
       related: true
       show_date: true
-      toc: true
-      toc_sticky: true
+      toc: false
+      toc_sticky: false
   - scope:
       path: "_pages"
     values:
       layout: single
-      author_profile: true
+      author_profile: false
   - scope:
       path: ""
     values:
       layout: single
-      author_profile: true
+      author_profile: false
 
 # ── Category archive ─────────────────────────────────────────────────────────
 category_archive:

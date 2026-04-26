@@ -40,6 +40,20 @@
       g.style.cssText="display:none;contain:strict;position:absolute;pointer-events:none;";
       document.body.appendChild(g);
     }
+
+    // Smooth transition for internal page navigation.
+    document.body.classList.add("as-page-ready");
+    var links = document.querySelectorAll('a[href^="/"]:not([target]):not([href^="//"])');
+    links.forEach(function(link){
+      link.addEventListener("click", function(evt){
+        var href = link.getAttribute("href");
+        if(!href || href.indexOf("#") === 0) return;
+        evt.preventDefault();
+        document.body.classList.remove("as-page-ready");
+        document.body.classList.add("as-page-leaving");
+        setTimeout(function(){ window.location.href = href; }, 180);
+      });
+    });
   });
 })();
 </script>
@@ -791,10 +805,49 @@ html{scroll-behavior:smooth;}
 .page__inner-wrap,
 .archive,
 .page {
-  width:min(1580px, 96vw) !important;
-  max-width:min(1580px, 96vw) !important;
+  width:min(1280px, 94vw) !important;
+  max-width:min(1280px, 94vw) !important;
   margin-left:auto !important;
   margin-right:auto !important;
+}
+
+.layout--single .sidebar,
+.layout--home .sidebar,
+.layout--archive .sidebar,
+.author__urls-wrapper,
+.author__bio,
+.author__avatar {
+  display:none !important;
+}
+
+.layout--single .page,
+.layout--home .page,
+.layout--archive .page {
+  width:100% !important;
+  float:none !important;
+}
+
+.layout--single .page__content {
+  max-width:860px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.as-subscribe-shell {
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+
+body {
+  opacity:0;
+  transition:opacity .26s ease;
+}
+
+body.as-page-ready {
+  opacity:1;
+}
+
+body.as-page-leaving {
+  opacity:.02;
 }
 
 .layout--single .page__content,
@@ -861,6 +914,43 @@ a:focus-visible {
   color:#9fc5ff !important;
 }
 
+.author__urls li,
+.social-icons li,
+.page__footer-follow li {
+  margin-right:.42rem !important;
+}
+
+.author__urls a,
+.page__footer a,
+.social-icons a {
+  padding:.22rem .36rem !important;
+  border-radius:8px !important;
+}
+
+.as-topic-grid {
+  gap:.68rem .95rem;
+}
+
+.as-topic-label {
+  padding:.36rem .94rem;
+}
+
+.as-subscribe-shell,
+#subscribe-form,
+.as-subscribe-copy {
+  min-width:0;
+}
+
+#subscribe-form input,
+#subscribe-form button {
+  width:100%;
+  box-sizing:border-box;
+}
+
+#subscribe-form #sub-btn {
+  width:auto;
+}
+
 .social-icons .fa:hover,
 .social-icons .fab:hover,
 .social-icons .fas:hover,
@@ -878,6 +968,29 @@ a:focus-visible {
   .as-process-card,
   #subscribe-section {
     border-radius:20px !important;
+  }
+}
+
+@media (max-width:1100px){
+  #main,
+  .initial-content,
+  .layout--home .archive,
+  .layout--home .page,
+  .layout--single .page,
+  .page__inner-wrap,
+  .archive,
+  .page {
+    width:min(1000px, 95vw) !important;
+    max-width:min(1000px, 95vw) !important;
+  }
+
+  .as-subscribe-shell {
+    grid-template-columns:1fr;
+    gap:1rem;
+  }
+
+  #subscribe-form #sub-btn {
+    width:100%;
   }
 }
 </style>
