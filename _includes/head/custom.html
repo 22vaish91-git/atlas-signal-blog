@@ -927,12 +927,35 @@ a:focus-visible {
   border-radius:8px !important;
 }
 
-.as-topic-grid {
-  gap:.68rem .95rem;
+.as-subscribe-section{
+  background:
+    radial-gradient(1000px 340px at 12% -24%, rgba(255,255,255,.11), transparent 62%),
+    radial-gradient(680px 280px at 100% 100%, rgba(148,163,184,.1), transparent 58%),
+    linear-gradient(132deg, rgba(9,14,23,.98) 0%, rgba(20,28,40,.95) 56%, rgba(13,18,27,.98) 100%);
+  border:1px solid rgba(200,217,244,.24);
+  border-radius:20px;
+  padding:2rem;
+  margin:2rem 0 1.3rem;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 24px 58px rgba(0,0,0,.3);
 }
 
-.as-topic-label {
-  padding:.36rem .94rem;
+.as-subscribe-title{
+  margin-top:0;
+  margin-bottom:.55rem;
+  font-size:clamp(1.45rem, 2.2vw, 2rem);
+  line-height:1.1;
+  color:#eef4ff;
+  letter-spacing:-.02em;
+}
+
+.as-subscribe-lead{
+  color:#a8b8cb;
+  font-size:.98rem;
+  margin-bottom:1.05rem;
+  line-height:1.75;
+  max-width:68ch;
 }
 
 .as-subscribe-shell,
@@ -941,14 +964,149 @@ a:focus-visible {
   min-width:0;
 }
 
+#subscribe-form{
+  display:flex;
+  flex-direction:column;
+  gap:.95rem;
+}
+
 #subscribe-form input,
 #subscribe-form button {
   width:100%;
   box-sizing:border-box;
 }
 
+#subscribe-form input[type="text"],
+#subscribe-form input[type="email"]{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;
+  padding:.82rem .95rem;
+  color:#e6edf3;
+  font-size:.95rem;
+  outline:none;
+  transition:border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+
+#subscribe-form input[type="text"]:focus,
+#subscribe-form input[type="email"]:focus{
+  border-color:rgba(200,217,244,.58);
+  box-shadow:0 0 0 4px rgba(148,163,184,.18);
+  transform:translateY(-1px);
+}
+
+.as-topic-wrap{
+  margin-top:.12rem;
+}
+
+.as-topic-copy{
+  color:#b3c1d1;
+  font-size:.86rem;
+  margin:0 0 .65rem;
+}
+
+.as-topic-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.65rem;
+}
+
+.as-topic-label {
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+  background:rgba(148,163,184,.09);
+  border:1px solid rgba(148,163,184,.24);
+  border-radius:12px;
+  padding:.62rem .82rem;
+  font-size:.9rem;
+  color:#d3deec;
+  cursor:pointer;
+  transition:background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.as-topic-label:hover{
+  background:rgba(148,163,184,.14);
+  border-color:rgba(200,217,244,.4);
+  transform:translateY(-1px);
+}
+
+.as-topic-label input[type="checkbox"]{
+  width:1.05rem;
+  height:1.05rem;
+  accent-color:#c8d9f4;
+  cursor:pointer;
+  margin:0;
+}
+
+.as-topic-label-all{
+  border-color:rgba(200,217,244,.5);
+  background:linear-gradient(135deg, rgba(148,163,184,.18), rgba(148,163,184,.08));
+}
+
+.as-consent-label{
+  display:flex;
+  align-items:flex-start;
+  gap:.75rem;
+  font-size:.86rem;
+  color:#bac7d6;
+  line-height:1.62;
+  cursor:pointer;
+}
+
+.as-consent-label input[type="checkbox"]{
+  width:1.08rem;
+  height:1.08rem;
+  accent-color:#c8d9f4;
+  margin-top:.12rem;
+  flex:0 0 auto;
+}
+
+.as-consent-subtext{
+  color:#97a7ba;
+}
+
+.as-consent-subtext a{
+  color:#d9e6fb;
+}
+
 #subscribe-form #sub-btn {
   width:auto;
+  align-self:flex-start;
+  min-height:48px;
+  padding:.85rem 1.38rem;
+  font-size:.93rem;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.as-sub-status{
+  display:none;
+  margin-top:1rem;
+  font-size:.92rem;
+  line-height:1.5;
+  padding:.68rem .8rem;
+  border-radius:10px;
+  border:1px solid transparent;
+  background:rgba(148,163,184,.08);
+}
+
+.as-sub-status.is-success{
+  color:#c8f0d5;
+  border-color:rgba(74,222,128,.4);
+  background:rgba(22,101,52,.3);
+}
+
+.as-sub-status.is-muted{
+  color:#d6deeb;
+  border-color:rgba(148,163,184,.35);
+  background:rgba(71,85,105,.28);
+}
+
+.as-sub-status.is-error{
+  color:#ffd6d6;
+  border-color:rgba(248,113,113,.42);
+  background:rgba(127,29,29,.34);
 }
 
 .social-icons .fa:hover,
@@ -991,6 +1149,18 @@ a:focus-visible {
 
   #subscribe-form #sub-btn {
     width:100%;
+    align-self:stretch;
+  }
+}
+
+@media (max-width:720px){
+  .as-subscribe-section{
+    padding:1.35rem;
+    border-radius:16px;
+  }
+
+  .as-topic-grid{
+    grid-template-columns:1fr;
   }
 }
 </style>

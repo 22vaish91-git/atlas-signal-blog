@@ -1,17 +1,9 @@
-<div id="subscribe-section" style="
-  background: linear-gradient(135deg, rgba(59,130,246,0.10) 0%, rgba(11,16,25,0.95) 55%, rgba(96,165,250,0.08) 100%);
-  border: 1px solid rgba(96,165,250,0.35);
-  border-radius: 14px;
-  padding: 2.1em 2.2em;
-  margin: 2.3em 0 1.6em;
-  position: relative;
-  overflow: hidden;
-">
+<section id="subscribe-section" class="as-subscribe-section as-smooth-lift" aria-labelledby="subscribe-title">
   <div class="as-subscribe-shell">
     <div class="as-subscribe-copy">
       <span class="as-eyebrow">Free subscription</span>
-      <h2 style="margin-top:0; font-size:1.55em; color:#e6edf3; letter-spacing:-0.02em;">Intelligence briefing, not inbox clutter.</h2>
-      <p style="color:#9fb0c3; font-size:0.95em; margin-bottom:1.1em; line-height:1.7; max-width:780px;">
+      <h2 id="subscribe-title" class="as-subscribe-title">Intelligence briefing, not inbox clutter.</h2>
+      <p class="as-subscribe-lead">
         Get concise AtlasSignal dispatches with the strongest angle, strategic consequence, and a direct path into the full report.
       </p>
       <div class="as-subscribe-points">
@@ -21,20 +13,16 @@
       </div>
     </div>
 
-    <form id="subscribe-form"
-          data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}/subscribe"
-          style="display:flex; flex-direction:column; gap:0.9em; max-width:680px; width:100%; min-width:0;">
+        <form id="subscribe-form"
+          class="as-subscribe-form"
+          data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}"
+          novalidate>
     <input
       type="text"
       id="sub-name"
       name="name"
       placeholder="Your name (optional)"
       autocomplete="name"
-      style="
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14);
-        border-radius: 9px; padding: 0.72em 1em; color: #e6edf3; font-size: 0.92em;
-        outline: none; transition: border-color 0.2s;
-      "
     >
     <input
       type="email"
@@ -43,16 +31,12 @@
       placeholder="your@email.com"
       required
       autocomplete="email"
-      style="
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14);
-        border-radius: 9px; padding: 0.72em 1em; color: #e6edf3; font-size: 0.92em;
-        outline: none; transition: border-color 0.2s;
-      "
     >
 
-    <div style="margin-top:0.2em;">
-      <p style="color:#93a4b7;font-size:0.83em;margin:0 0 0.62em;">Pick the lanes you want first in your inbox:</p>
+    <div class="as-topic-wrap">
+      <p class="as-topic-copy">Pick the lanes you want first in your inbox:</p>
       <div class="as-topic-grid">
+        <label class="as-topic-label as-topic-label-all"><input type="checkbox" name="topics" value="All" data-all-topic="true"> All topics</label>
         <label class="as-topic-label"><input type="checkbox" name="topics" value="AI"> AI</label>
         <label class="as-topic-label"><input type="checkbox" name="topics" value="Tech"> Tech</label>
         <label class="as-topic-label"><input type="checkbox" name="topics" value="Space"> Space</label>
@@ -65,101 +49,165 @@
 
     <label class="as-consent-label">
       <input type="checkbox" id="sub-consent" required>
-      I agree to receive AtlasSignal topic updates. <span style="color:#6e7681;">Unsubscribe any time. <a href="/privacy/" style="color:#93c5fd;">Privacy Policy</a>.</span>
+      <span>
+        I agree to receive AtlasSignal topic updates.
+        <span class="as-consent-subtext">Unsubscribe any time. <a href="/privacy/">Privacy Policy</a>.</span>
+      </span>
     </label>
 
-    <button
-      type="submit"
-      id="sub-btn"
-      style="
-        background: linear-gradient(135deg, #2563eb, #60a5fa); color:#fff; border:none; border-radius: 9px;
-        padding: 0.78em 1.7em; font-size: 0.93em; font-weight: 700;
-        cursor: pointer; letter-spacing: 0.35px; transition: transform 0.2s, opacity 0.2s;
-        align-self: flex-start;
-      "
-    >
+    <button type="submit" id="sub-btn">
       Subscribe Free
     </button>
     </form>
   </div>
 
-  <div id="sub-status" style="display:none; margin-top:1em; font-size:0.9em; line-height:1.5;"></div>
-</div>
+  <div id="sub-status" class="as-sub-status" role="status" aria-live="polite"></div>
+</section>
 
 <script>
 (function () {
   var form = document.getElementById('subscribe-form');
-  if (!form) return;
+  if (!form || form.dataset.bound === 'true') return;
+  form.dataset.bound = 'true';
+
+  var allCheckbox = form.querySelector('input[data-all-topic="true"]');
+  var topicCheckboxes = Array.prototype.slice.call(
+    form.querySelectorAll('input[name="topics"]:not([data-all-topic="true"])')
+  );
+
+  function setStatus(kind, message) {
+    var status = document.getElementById('sub-status');
+    if (!status) return;
+    status.style.display = 'block';
+    status.className = 'as-sub-status ' + (kind || '');
+    status.textContent = message;
+  }
+
+  function clearStatus() {
+    var status = document.getElementById('sub-status');
+    if (!status) return;
+    status.style.display = 'none';
+    status.className = 'as-sub-status';
+    status.textContent = '';
+  }
+
+  if (allCheckbox) {
+    allCheckbox.addEventListener('change', function () {
+      topicCheckboxes.forEach(function (cb) { cb.checked = allCheckbox.checked; });
+    });
+
+    topicCheckboxes.forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        var everyChecked = topicCheckboxes.length > 0 && topicCheckboxes.every(function (item) { return item.checked; });
+        allCheckbox.checked = everyChecked;
+      });
+    });
+  }
 
   ['sub-name', 'sub-email'].forEach(function (id) {
     var el = document.getElementById(id);
     if (!el) return;
-    el.addEventListener('focus',  function () { el.style.borderColor = 'rgba(96,165,250,0.65)'; });
-    el.addEventListener('blur',   function () { el.style.borderColor = 'rgba(255,255,255,0.14)'; });
+    el.addEventListener('input', clearStatus);
   });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn     = document.getElementById('sub-btn');
-    var status  = document.getElementById('sub-status');
     var email   = (document.getElementById('sub-email').value || '').trim();
     var name    = (document.getElementById('sub-name').value  || '').trim();
     var consent = document.getElementById('sub-consent');
-    var apiUrl  = form.getAttribute('data-api-url');
+    var apiUrl  = (form.getAttribute('data-api-url') || '').replace(/\/$/, '');
 
-    if (!email) return;
+    var allTopics = ['AI', 'Tech', 'Space', 'Health', 'Sports', 'Innovation', 'General'];
+
+    if (!email) {
+      setStatus('is-error', 'Please enter a valid email address.');
+      return;
+    }
 
     var topics = Array.prototype.slice.call(
-      form.querySelectorAll('input[name="topics"]:checked')
+      form.querySelectorAll('input[name="topics"]:checked:not([data-all-topic="true"])')
     ).map(function (cb) { return cb.value; });
 
+    if (allCheckbox && allCheckbox.checked) {
+      topics = allTopics.slice();
+    }
+
     if (!topics.length) {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = 'Please select at least one topic.';
+      setStatus('is-error', 'Please select at least one topic.');
       return;
     }
 
     if (!consent || !consent.checked) {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = 'Please provide consent to continue.';
+      setStatus('is-error', 'Please provide consent to continue.');
       return;
     }
 
     btn.disabled    = true;
     btn.textContent = 'Subscribing...';
-    status.style.display = 'none';
+    clearStatus();
 
-    fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, name: name, topics: topics, consent: true }),
-    })
-    .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, data: d }; }); })
-    .then(function (r) {
-      status.style.display = 'block';
-      if (r.ok) {
-        var already = r.data.status === 'already_subscribed';
-        status.style.color = already ? '#8b949e' : '#2ecc71';
-        status.innerHTML = already
-          ? 'You are already subscribed. Check your inbox for fresh briefings.'
-          : 'Almost done. Check your inbox and verify your email to activate delivery.';
-        form.reset();
-      } else {
-        status.style.color   = '#e74c3c';
-        status.textContent   = r.data.detail || 'Subscription failed. Please try again.';
+    var payload = JSON.stringify({ email: email, name: name, topics: topics, consent: true });
+    var endpoints = [];
+    if (apiUrl) endpoints.push(apiUrl + '/subscribe');
+    endpoints.push(window.location.origin.replace(/\/$/, '') + '/subscribe');
+    endpoints.push('https://atlassignal.in/subscribe');
+
+    endpoints = endpoints.filter(function (url, idx, arr) { return arr.indexOf(url) === idx; });
+
+    function trySubmit(index) {
+      if (index >= endpoints.length) {
+        throw new Error('All subscribe endpoints failed');
       }
-      btn.disabled    = false;
-      btn.textContent = 'Subscribe Free';
-    })
-    .catch(function () {
-      status.style.display = 'block';
-      status.style.color   = '#e74c3c';
-      status.textContent   = 'Network error. Please retry.';
-      btn.disabled    = false;
-      btn.textContent = 'Subscribe Free';
-    });
+
+      return fetch(endpoints[index], {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: payload
+      }).then(function (res) {
+        return res.text().then(function (text) {
+          var data = {};
+          try {
+            data = text ? JSON.parse(text) : {};
+          } catch (_) {
+            data = { detail: text || 'Subscription failed. Please try again.' };
+          }
+
+          if (!res.ok) {
+            if (res.status >= 500 && index < endpoints.length - 1) {
+              return trySubmit(index + 1);
+            }
+            return { ok: false, data: data };
+          }
+          return { ok: true, data: data };
+        });
+      }).catch(function () {
+        if (index < endpoints.length - 1) {
+          return trySubmit(index + 1);
+        }
+        return { ok: false, data: { detail: 'Subscription failed. Please try again.' } };
+      });
+    }
+
+    trySubmit(0)
+      .then(function (r) {
+        if (r.ok) {
+          var already = r.data.status === 'already_subscribed';
+          setStatus(
+            already ? 'is-muted' : 'is-success',
+            already
+              ? 'You are already subscribed. Check your inbox for fresh briefings.'
+              : 'Almost done. Check your inbox and verify your email to activate delivery.'
+          );
+          form.reset();
+        } else {
+          setStatus('is-error', r.data.detail || 'Subscription failed. Please try again.');
+        }
+      })
+      .finally(function () {
+        btn.disabled    = false;
+        btn.textContent = 'Subscribe Free';
+      });
   });
 })();
 </script>
