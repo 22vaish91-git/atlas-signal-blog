@@ -122,6 +122,7 @@ category_archive:
 # ── Exclude from build ───────────────────────────────────────────────────────
 include:
   - _pages
+  - ads.txt
 
 exclude:
   - README.md

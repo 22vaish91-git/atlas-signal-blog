@@ -4,7 +4,7 @@
 {% assign adsense_inject_after_paragraph = site.adsense.inject_after_paragraph | default: 2 %}
 
 <link rel="shortcut icon" href="/assets/images/header.png" type="image/png">
-<meta name="theme-color" content="#f6f8fc">
+<meta name="theme-color" content="#0a0d12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -13,21 +13,21 @@
 
 <style>
 :root {
-  --as-bg: #f6f8fc;
-  --as-bg-soft: #eef3fb;
-  --as-surface: rgba(255, 255, 255, 0.88);
-  --as-surface-strong: #ffffff;
-  --as-border: rgba(13, 31, 64, 0.12);
-  --as-border-strong: rgba(13, 31, 64, 0.22);
-  --as-ink: #0f223f;
-  --as-ink-soft: #486181;
-  --as-accent: #1f66ff;
-  --as-accent-soft: #e7efff;
-  --as-ok: #198754;
-  --as-danger: #c7392f;
+  --as-bg: #0a0d12;
+  --as-bg-soft: #111520;
+  --as-surface: rgba(18, 22, 34, 0.92);
+  --as-surface-strong: #161b28;
+  --as-border: rgba(255, 255, 255, 0.09);
+  --as-border-strong: rgba(255, 255, 255, 0.18);
+  --as-ink: #e8edf5;
+  --as-ink-soft: #7a94b4;
+  --as-accent: #4d8bff;
+  --as-accent-soft: #1a2840;
+  --as-ok: #34d058;
+  --as-danger: #f85149;
   --as-radius: 18px;
   --as-radius-sm: 12px;
-  --as-shadow: 0 18px 38px rgba(19, 42, 83, 0.11);
+  --as-shadow: 0 18px 38px rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -35,13 +35,11 @@ html {
 }
 
 body {
-  font-family: "Outfit", "Segoe UI", sans-serif !important;
+  font-family: -apple-system, "SF Pro Display", "Outfit", "Segoe UI", sans-serif !important;
   color: var(--as-ink) !important;
-  background:
-    radial-gradient(1200px 520px at -8% -14%, #dce9ff 0%, rgba(220, 233, 255, 0) 55%),
-    radial-gradient(1000px 520px at 108% -18%, #e9f4ff 0%, rgba(233, 244, 255, 0) 56%),
-    linear-gradient(180deg, #f8fafe 0%, #f3f6fc 100%);
+  background: #0a0d12 !important;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
@@ -54,18 +52,18 @@ h6,
 .page__title,
 .archive__item-title,
 .author__name {
-  font-family: "Outfit", sans-serif !important;
+  font-family: -apple-system, "SF Pro Display", "Outfit", sans-serif !important;
   color: var(--as-ink) !important;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 a {
-  color: #1647aa !important;
+  color: #69a5ff !important;
   transition: color 180ms ease;
 }
 
 a:hover {
-  color: #0f62fe !important;
+  color: #90b8ff !important;
 }
 
 #as-progress {
@@ -84,8 +82,8 @@ a:hover {
   position: sticky !important;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(14px) saturate(180%);
-  background: rgba(246, 248, 252, 0.86) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  background: rgba(10, 13, 18, 0.88) !important;
   border-bottom: 1px solid var(--as-border) !important;
 }
 
@@ -113,22 +111,22 @@ a.site-title {
 
 .masthead .site-subtitle,
 .site-subtitle {
-  color: #6b84a7 !important;
+  color: #5a78a0 !important;
   font-size: 0.66rem !important;
   text-transform: uppercase;
   letter-spacing: 0.09em;
 }
 
 .greedy-nav a {
-  color: #38567e !important;
+  color: #a0b8d8 !important;
   font-weight: 500 !important;
   border-radius: 10px;
   transition: background 180ms ease, color 180ms ease;
 }
 
 .greedy-nav a:hover {
-  color: #143a80 !important;
-  background: rgba(26, 82, 195, 0.08) !important;
+  color: #c8d8f4 !important;
+  background: rgba(77, 139, 255, 0.12) !important;
 }
 
 /* Main width */
@@ -191,8 +189,8 @@ a.site-title {
 
 .archive__item:hover {
   transform: translateY(-4px);
-  border-color: var(--as-border-strong);
-  box-shadow: 0 24px 42px rgba(27, 59, 115, 0.16);
+  border-color: rgba(77, 139, 255, 0.28);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(77, 139, 255, 0.12);
 }
 
 .archive__item-title {
@@ -214,16 +212,16 @@ a.site-title {
 
 .page__content h2 {
   font-size: clamp(1.5rem, 2vw, 2rem) !important;
-  border-bottom: 1px solid rgba(36, 73, 131, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 0.3rem;
 }
 
 .page__content blockquote {
-  border-left: 4px solid #8cb0ff;
-  background: #f1f6ff;
+  border-left: 4px solid #4d8bff;
+  background: #0e1525;
   border-radius: 0 12px 12px 0;
   padding: 1rem 1.2rem;
-  color: #365073;
+  color: #8fadd4;
 }
 
 .page__content img {
@@ -236,7 +234,7 @@ a.site-title {
 .as-eyebrow {
   display: inline-block;
   margin-bottom: 0.6rem;
-  color: #2f5fad;
+  color: #69a5ff;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.73rem;
@@ -257,8 +255,9 @@ a.site-title {
 .as-story-panel h2,
 .as-post-spotlight h2 {
   margin: 0.02em 0 0.45em !important;
-  font-size: clamp(1.7rem, 3.1vw, 2.7rem) !important;
-  line-height: 1.08 !important;
+  font-size: clamp(2rem, 3.6vw, 3.2rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.04em !important;
   border-bottom: none !important;
   padding-bottom: 0 !important;
 }
@@ -271,7 +270,7 @@ a.site-title {
 .as-hero-proof > div {
   border: 1px solid var(--as-border);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(20, 26, 42, 0.85);
   padding: 0.9rem;
 }
 
@@ -307,9 +306,9 @@ a.site-title {
 .as-process-card {
   border: 1px solid var(--as-border);
   border-radius: var(--as-radius-sm);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(18, 22, 34, 0.88);
   padding: 0.95rem;
-  box-shadow: 0 12px 28px rgba(24, 55, 112, 0.11);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .as-process-card strong {
@@ -337,7 +336,7 @@ a.site-title {
 }
 
 .as-card-index {
-  color: #2e5fd0;
+  color: #69a5ff;
   font-size: 0.74rem;
   letter-spacing: 0.14em;
 }
@@ -381,16 +380,16 @@ a.site-title {
   padding: 0.66rem 0.75rem;
   border-radius: 12px;
   border: 1px solid var(--as-border);
-  background: rgba(255, 255, 255, 0.78);
-  color: #143c82 !important;
+  background: rgba(20, 26, 42, 0.85);
+  color: #c0d4ef !important;
   text-decoration: none !important;
   line-height: 1.4;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .as-post-link:hover {
-  background: #edf3ff;
-  border-color: rgba(33, 83, 170, 0.3);
+  background: rgba(30, 40, 65, 0.95);
+  border-color: rgba(77, 139, 255, 0.35);
   transform: translateY(-2px);
 }
 
@@ -413,8 +412,8 @@ a.site-title {
 }
 
 .btn--inverse {
-  background: #ffffff !important;
-  color: #1b4ba0 !important;
+  background: #161b28 !important;
+  color: #c0d4ef !important;
 }
 
 .btn:hover,
@@ -458,11 +457,11 @@ a.site-title {
 }
 
 .as-subscribe-points span {
-  border: 1px solid rgba(28, 74, 155, 0.22);
-  background: #eef4ff;
+  border: 1px solid rgba(77, 139, 255, 0.25);
+  background: rgba(18, 28, 52, 0.9);
   border-radius: 999px;
   padding: 0.34rem 0.66rem;
-  color: #2859aa;
+  color: #7ab0e8;
   font-size: 0.78rem;
 }
 
@@ -476,8 +475,9 @@ a.site-title {
 #subscribe-form input[type="email"] {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(26, 67, 137, 0.23);
-  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0e1220;
+  color: #e8edf5;
   border-radius: 12px;
   padding: 0.76rem 0.88rem;
   font-size: 0.95rem;
@@ -485,8 +485,8 @@ a.site-title {
 
 #subscribe-form input:focus {
   outline: none;
-  border-color: #2b64ce;
-  box-shadow: 0 0 0 3px rgba(43, 100, 206, 0.16);
+  border-color: #4d8bff;
+  box-shadow: 0 0 0 3px rgba(77, 139, 255, 0.18);
 }
 
 .as-topic-copy {
@@ -508,10 +508,10 @@ a.site-title {
   align-items: center;
   gap: 0.56rem;
   border-radius: 12px;
-  border: 1px solid rgba(26, 67, 137, 0.2);
-  background: #f4f8ff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(16, 22, 38, 0.9);
   padding: 0.54rem 0.68rem;
-  color: #244a8d;
+  color: #90b0d8;
   font-size: 0.88rem;
   overflow: hidden;
 }
@@ -531,20 +531,20 @@ a.site-title {
 }
 
 .as-topic-label:hover {
-  border-color: rgba(32, 86, 182, 0.33);
-  background: #eaf2ff;
+  border-color: rgba(77, 139, 255, 0.3);
+  background: rgba(25, 35, 60, 0.95);
 }
 
 .as-topic-label-all {
-  background: #e4efff;
-  border-color: rgba(32, 86, 182, 0.35);
+  background: rgba(20, 30, 55, 0.95);
+  border-color: rgba(77, 139, 255, 0.35);
 }
 
 .as-consent-label {
   display: flex;
   align-items: flex-start;
   gap: 0.66rem;
-  color: #4b6485;
+  color: #8fa8c8;
   line-height: 1.52;
   font-size: 0.84rem;
 }
@@ -559,7 +559,7 @@ a.site-title {
 
 .as-consent-subtext {
   display: block;
-  color: #6d84a5;
+  color: #7a94b4;
 }
 
 #subscribe-form #sub-btn {
@@ -580,23 +580,23 @@ a.site-title {
 
 .as-sub-status.is-success {
   display: block;
-  color: #146c43;
-  border-color: rgba(25, 135, 84, 0.3);
-  background: rgba(25, 135, 84, 0.1);
+  color: #34d058;
+  border-color: rgba(52, 208, 88, 0.3);
+  background: rgba(52, 208, 88, 0.08);
 }
 
 .as-sub-status.is-muted {
   display: block;
-  color: #38567e;
-  border-color: rgba(56, 86, 126, 0.3);
-  background: rgba(56, 86, 126, 0.1);
+  color: #7a94b4;
+  border-color: rgba(122, 148, 180, 0.3);
+  background: rgba(122, 148, 180, 0.08);
 }
 
 .as-sub-status.is-error {
   display: block;
-  color: #943228;
-  border-color: rgba(199, 57, 47, 0.34);
-  background: rgba(199, 57, 47, 0.1);
+  color: #f85149;
+  border-color: rgba(248, 81, 73, 0.34);
+  background: rgba(248, 81, 73, 0.08);
 }
 
 /* Footer block */
@@ -621,7 +621,7 @@ a.site-title {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.83rem;
-  color: #6a82a3;
+  color: #7a94b4;
 }
 
 .as-footer-links a {
@@ -646,12 +646,12 @@ a.site-title {
   border-radius: 14px;
   padding: 0.5rem;
   margin: 1.7rem auto;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(16, 22, 38, 0.82);
 }
 
 .as-ad-label {
   margin: 0 0 0.3rem;
-  color: #6d84a5;
+  color: #7a94b4;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.65rem;
