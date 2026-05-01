@@ -13,7 +13,7 @@ header:
   excerpt: "Signal-first intelligence on AI, markets, geopolitics, and strategic technology."
 ---
 
-<section class="as-hero-band as-smooth-lift" style="margin:1.1em 0 1.4em;">
+<section class="as-hero-band as-reveal" style="margin:1.1em 0 1.4em;">
   <div class="as-hero-copy">
     <span class="as-eyebrow">AtlasSignal Intelligence</span>
     <h2>Signal before narrative.</h2>
@@ -35,25 +35,76 @@ header:
   </div>
 </section>
 
+<section class="as-landing-top as-reveal" style="margin:0 0 1.3em;">
+  <aside class="as-side-panel">
+    <span class="as-eyebrow">Live Priority</span>
+    <h3>What to read first</h3>
+    <p>Start with the top spotlight list, then move to category view for your domain lane.</p>
+    <ul>
+      <li>Macro and markets context</li>
+      <li>Technology and AI shifts</li>
+      <li>India and global policy signals</li>
+    </ul>
+  </aside>
+
+  <section class="as-post-spotlight" aria-labelledby="as-top-posts-title">
+    <span class="as-eyebrow">Top Signals</span>
+    <h2 id="as-top-posts-title">Latest blog reports, one click away</h2>
+    <p>These links update from the latest published reports so visitors immediately see active analysis.</p>
+    <div class="as-post-links">
+      {% for post in site.posts limit: 7 %}
+        <a class="as-post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% endfor %}
+      <a class="as-post-link" href="/categories/">Browse all categories and archives</a>
+    </div>
+  </section>
+
+  <aside class="as-side-panel">
+    <span class="as-eyebrow">Desk Channels</span>
+    <h3>Cross-channel signal flow</h3>
+    <p>Blog for full context, X for pulse updates, YouTube for rapid visual synthesis.</p>
+    <ul>
+      <li><a href="https://x.com/AtlasSignalDesk" target="_blank" rel="noopener">Live Desk on X</a></li>
+      <li><a href="https://www.youtube.com/channel/UCSdsK1wfTmUyHzZXX_rt2aQ" target="_blank" rel="noopener">YouTube briefings</a></li>
+      <li><a href="#subscribe-section">Email subscription lanes</a></li>
+    </ul>
+  </aside>
+</section>
+
+<section class="as-story-panel as-reveal" aria-labelledby="top-blog-links-title" style="margin:0 0 1.35em;">
+  <div class="as-top-blog-header">
+    <span class="as-eyebrow">AtlasSignal Intelligence</span>
+    <h2 id="top-blog-links-title">Landing page now surfaces all primary routes</h2>
+  </div>
+  <p class="as-top-blog-copy">Fast navigation for new visitors and returning readers.</p>
+  <p style="margin:0;">
+    <a class="btn btn--inverse" href="/">All posts</a>
+    <a class="btn btn--inverse" href="/categories/">Categories</a>
+    <a class="btn btn--inverse" href="/about/">About</a>
+    <a class="btn btn--inverse" href="/contact/">Contact</a>
+    <a class="btn btn--inverse" href="/privacy/">Privacy</a>
+  </p>
+</section>
+
 <section class="as-feature-grid" style="margin:0 0 1.35em;">
-  <article class="as-feature-card as-smooth-lift">
+  <article class="as-feature-card as-reveal">
     <span class="as-card-index">01</span>
     <h3>Fast read</h3>
     <p>Each story is shaped to become useful in under 90 seconds, then expandable into full context.</p>
   </article>
-  <article class="as-feature-card as-smooth-lift">
+  <article class="as-feature-card as-reveal">
     <span class="as-card-index">02</span>
     <h3>Strategic depth</h3>
     <p>Beyond headlines: incentives, second-order effects, and practical implications for decisions.</p>
   </article>
-  <article class="as-feature-card as-smooth-lift">
+  <article class="as-feature-card as-reveal">
     <span class="as-card-index">03</span>
     <h3>Cross-channel flow</h3>
     <p>X for rapid pulse, blog for full intelligence, YouTube Shorts for fast visual briefings.</p>
   </article>
 </section>
 
-<section class="as-story-panel as-smooth-lift" style="margin:0 0 1.7em;">
+<section class="as-story-panel as-reveal" style="margin:0 0 1.7em;">
   <div>
     <span class="as-eyebrow">Read by intent</span>
     <h2>Choose the channel by how deep you want to go.</h2>
@@ -66,7 +117,7 @@ header:
   </p>
 </section>
 
-<section class="as-story-panel as-smooth-lift" style="margin:0 0 2em;">
+<section class="as-story-panel as-reveal" style="margin:0 0 2em;">
   <div>
     <span class="as-eyebrow">Reader controls</span>
     <h2>Transparency and low-friction controls are always available.</h2>

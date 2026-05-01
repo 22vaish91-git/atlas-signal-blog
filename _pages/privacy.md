@@ -45,3 +45,14 @@ User controls:
 If we make material changes to this policy, we will update this page before changes are applied.
 
 Contact: atlassignal.ai@gmail.com
+
+<section class="as-story-panel as-reveal" style="margin-top:1.2rem;">
+	<span class="as-eyebrow">Quick Links</span>
+	<h2>Related routes</h2>
+	<p style="margin:0;">
+		<a class="btn btn--inverse" href="/">Home</a>
+		<a class="btn btn--inverse" href="/categories/">Categories</a>
+		<a class="btn btn--inverse" href="/contact/">Contact</a>
+		<a class="btn btn--inverse" href="/about/">About</a>
+	</p>
+</section>

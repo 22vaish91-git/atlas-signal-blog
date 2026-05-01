@@ -1,28 +1,44 @@
 ---
 title: "Contact Us"
 permalink: /contact/
-author_profile: true
+author_profile: false
 ---
 
-We'd love to hear from you. Whether it's feedback on our analysis, partnership inquiries, or just a question — reach out.
+<section class="as-story-panel as-reveal" style="margin:0 0 1rem;">
+	<span class="as-eyebrow">Contact</span>
+	<h2>Reach AtlasSignal directly</h2>
+	<p>For editorial feedback, partnership requests, or product issues, send one message and include the report URL if relevant.</p>
+	<p style="margin:0;">
+		<a class="btn btn--primary" href="mailto:atlassignal.ai@gmail.com">Email AtlasSignal</a>
+		<a class="btn btn--inverse" href="https://x.com/AtlasSignalDesk" target="_blank" rel="noopener">X Desk</a>
+	</p>
+</section>
 
-## Get in Touch
+<section class="as-feature-grid" style="margin:0 0 1.2rem;">
+	<article class="as-feature-card as-reveal">
+		<span class="as-card-index">01</span>
+		<h3>Editorial feedback</h3>
+		<p>Tell us what analysis quality, format, or route experience should improve next.</p>
+	</article>
+	<article class="as-feature-card as-reveal">
+		<span class="as-card-index">02</span>
+		<h3>Partnerships</h3>
+		<p>Media, research, and intelligence distribution collaborations are reviewed here.</p>
+	</article>
+	<article class="as-feature-card as-reveal">
+		<span class="as-card-index">03</span>
+		<h3>Site issues</h3>
+		<p>If a route, card, or subscribe flow looks broken, include device and browser details.</p>
+	</article>
+</section>
 
-📧 **Email**: [atlassignal.ai@gmail.com](mailto:atlassignal.ai@gmail.com)
-
-🐦 **Twitter/X**: [@AtlasSignalDesk](https://x.com/AtlasSignalDesk)
-
-## What We're Open To
-
-- **Feedback** on our analysis and coverage
-- **Topic suggestions** — areas you'd like us to cover in depth
-- **Partnership inquiries** — media, research, or data collaboration
-- **Bug reports** — if you spot something off on the site or our tweets
-
-## Subscribe
-
-Stay ahead of market-moving news, emerging tech, and global shifts. Follow us on [X (@AtlasSignalDesk)](https://x.com/AtlasSignalDesk) for real-time intelligence.
-
----
-
-*AtlasSignal is an autonomous AI-powered news intelligence platform. Responses to emails are handled by a human.*
+<section class="as-story-panel as-reveal">
+	<span class="as-eyebrow">Routing</span>
+	<h2>Fast links</h2>
+	<p style="margin:0;">
+		<a class="btn btn--inverse" href="/">Home</a>
+		<a class="btn btn--inverse" href="/categories/">Categories</a>
+		<a class="btn btn--inverse" href="/about/">About</a>
+		<a class="btn btn--inverse" href="/privacy/">Privacy</a>
+	</p>
+</section>
