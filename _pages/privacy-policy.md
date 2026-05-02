@@ -4,19 +4,24 @@ title: "Privacy Policy"
 permalink: /privacy-policy/
 ---
 
-AtlasSignal privacy policy is available at [https://atlassignal.in/privacy/](https://atlassignal.in/privacy/).
+This route mirrors the canonical privacy policy at /privacy/ for platform review compatibility.
 
-For Google OAuth verification and platform compliance review, use the canonical privacy URL:
+## Canonical Policy
 
 - https://atlassignal.in/privacy/
 
-If you need support, contact atlassignal.ai@gmail.com.
+## Summary
+
+AtlasSignal is a user-controlled publishing and analytics platform. Publishing actions are user-initiated or user-approved. AtlasSignal does not sell user data.
+
+For the complete policy text including YouTube API Services disclosures and user rights, open the canonical privacy page.
 
 <section class="as-story-panel as-reveal" style="margin-top:1.1rem;">
 	<span class="as-eyebrow">Policy Route</span>
-	<h2>Use the canonical privacy page</h2>
+	<h2>Open full privacy policy</h2>
 	<p style="margin:0;">
 		<a class="btn btn--primary" href="/privacy/">Open Privacy Policy</a>
+		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
 		<a class="btn btn--inverse" href="/">Return Home</a>
 	</p>
 </section>

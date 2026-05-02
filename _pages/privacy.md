@@ -4,53 +4,108 @@ title: "Privacy Policy"
 permalink: /privacy/
 ---
 
-AtlasSignal uses Google APIs and platform APIs only to deliver user-facing features you explicitly enable.
+Last updated: 3 May 2026
 
-Last updated: 26 April 2026
+AtlasSignal respects user consent, user control, and transparent data handling. This Privacy Policy explains what we collect, how we use it, and the choices available to you when using AtlasSignal services at https://atlassignal.in.
 
-This policy explains what data AtlasSignal collects, how it is used, and how you can control it.
+## Introduction
 
-Google API Services disclosure:
-- AtlasSignal's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.
-- AtlasSignal does not use Google user data to develop, improve, or train generalized AI/ML models.
+AtlasSignal is a content management and publishing platform that helps users create, review, and publish content across supported channels. AtlasSignal also provides analytics and workflow tooling to support user-approved publishing decisions.
 
-What we collect:
-- Email address and optional name when you subscribe to AtlasSignal updates.
-- Topic preferences you choose in subscription forms.
-- OAuth tokens and API credentials required to publish user-authorized content.
+All publishing actions are user-initiated or user-approved. AtlasSignal does not send unsolicited messages on your behalf.
 
-How we use data:
-- To deliver newsletter updates and manage subscriptions/unsubscribes.
-- To publish requested content to connected channels (for example, YouTube and X) when enabled.
-- To monitor reliability, security, and abuse prevention of the service.
+## Data We Collect
 
-How we store and protect data:
-- Secrets and OAuth tokens are stored in AWS Systems Manager Parameter Store as SecureString values.
-- Access is restricted to required service roles and audited infrastructure paths.
-- Data is retained only as needed for user-facing functionality, security, and legal obligations.
+We may collect the following categories of information:
 
-How we share data:
-- AtlasSignal does not sell Google user data or transfer it for advertising.
-- Data sharing is limited to service providers needed to operate user-facing features, security, legal compliance, or explicit user-authorized actions.
+- Account and contact data: email address, display name, and account identifiers you provide.
+- Connected platform data: tokens, account/page/channel IDs, and permissions granted through OAuth or platform authorization.
+- Publishing and workflow data: drafts, captions, media metadata, publication status, and approval actions.
+- Analytics and performance data: engagement metrics, post/video metadata, and operational usage logs.
+- Technical and security data: error logs, service diagnostics, and anti-abuse telemetry.
 
-How we use Google user data:
-- Only to perform user-requested actions such as authenticated publishing and associated operational checks.
-- Not for advertising, profiling, or resale.
-- Access is limited to the minimum scopes required for enabled features.
+We collect only the information reasonably required to provide the features you enable.
 
-User controls:
-- You can unsubscribe at any time through newsletter unsubscribe links.
-- You can request deletion or correction by contacting us at atlassignal.ai@gmail.com.
+## How We Use Data
 
-If we make material changes to this policy, we will update this page before changes are applied.
+AtlasSignal uses data to:
 
-Contact: atlassignal.ai@gmail.com
+- Authenticate and maintain connected platform integrations.
+- Publish or schedule content when you explicitly request or approve it.
+- Provide workflow visibility, status updates, and analytics insights.
+- Improve reliability, security, and incident response.
+- Meet legal, compliance, and audit requirements.
+
+## YouTube API Services
+
+AtlasSignal uses YouTube API Services for user-authorized publishing and related analytics workflows.
+
+- YouTube Terms of Service: https://www.youtube.com/t/terms
+- Data accessed (based on granted scopes): channel metadata, video metadata, upload status, and analytics-related metadata needed for publishing insights.
+- Purpose: upload and manage user-approved video content, monitor publishing outcomes, and present performance insights.
+- User control: you can revoke access at any time through your Google account permissions and by disconnecting YouTube in AtlasSignal.
+- Google API Services User Data Policy: AtlasSignal complies with the Google API Services User Data Policy, including Limited Use requirements.
+
+AtlasSignal does not use Google user data for unrelated advertising purposes and does not use Google user data to train generalized AI or ML models.
+
+## Data Sharing Policy
+
+AtlasSignal does not sell personal data.
+
+Data is shared only when necessary to provide requested service functionality, including:
+
+- Platform APIs you explicitly connect (for example: YouTube, Meta platforms, X).
+- Infrastructure and security providers required to run AtlasSignal safely.
+- Legal or regulatory requests when disclosure is required by applicable law.
+
+Any sharing is limited to the minimum scope needed for the relevant purpose.
+
+## Data Retention
+
+AtlasSignal retains data for only as long as necessary to:
+
+- Provide user-requested features and workflow history.
+- Maintain security and fraud prevention controls.
+- Satisfy legal, tax, accounting, and compliance obligations.
+
+When data is no longer required, it is deleted or anonymized according to operational retention controls.
+
+## Security Measures
+
+AtlasSignal implements administrative, technical, and organizational safeguards, including:
+
+- Secure secret storage and encrypted transport where applicable.
+- Access controls based on least privilege.
+- Logging and monitoring for operational and security events.
+- Periodic review of integration scopes and credential handling.
+
+No system can guarantee absolute security, but AtlasSignal continuously works to protect user data.
+
+## User Rights and Control
+
+You can:
+
+- Disconnect connected platform accounts.
+- Revoke OAuth permissions directly at the platform account level.
+- Request access, correction, or deletion of relevant personal data.
+
+For deletion requests, see the dedicated data deletion page at /data-deletion/.
+
+## Contact Information
+
+For privacy questions or data rights requests:
+
+- Email: atlassignal.ai@gmail.com
+- Website: https://atlassignal.in
+
+If this policy changes materially, the updated version will be posted on this page with a revised date.
 
 <section class="as-story-panel as-reveal" style="margin-top:1.2rem;">
 	<span class="as-eyebrow">Quick Links</span>
 	<h2>Related routes</h2>
 	<p style="margin:0;">
 		<a class="btn btn--inverse" href="/">Home</a>
+		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
 		<a class="btn btn--inverse" href="/categories/">Categories</a>
 		<a class="btn btn--inverse" href="/contact/">Contact</a>
 		<a class="btn btn--inverse" href="/about/">About</a>
