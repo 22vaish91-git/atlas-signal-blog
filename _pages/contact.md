@@ -11,6 +11,8 @@ author_profile: false
 	<p style="margin:0;">
 		<a class="btn btn--primary" href="mailto:atlassignal.ai@gmail.com">Email AtlasSignal</a>
 		<a class="btn btn--inverse" href="https://x.com/AtlasSignalDesk" target="_blank" rel="noopener">X Desk</a>
+		<a class="btn btn--inverse" href="https://www.facebook.com/profile.php?id=61588958171608" target="_blank" rel="noopener">Facebook</a>
+		<a class="btn btn--inverse" href="https://www.instagram.com/atlassignal/" target="_blank" rel="noopener">Instagram</a>
 	</p>
 </section>
 
