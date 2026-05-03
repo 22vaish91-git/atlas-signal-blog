@@ -49,6 +49,7 @@ If you have questions about deletion status or scope, contact:
 	<h2>Related pages</h2>
 	<p style="margin:0;">
 		<a class="btn btn--primary" href="/privacy/">Privacy Policy</a>
+		<a class="btn btn--inverse" href="/terms/">Terms</a>
 		<a class="btn btn--inverse" href="/contact/">Contact</a>
 		<a class="btn btn--inverse" href="/">Home</a>
 	</p>

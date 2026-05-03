@@ -48,6 +48,20 @@ AtlasSignal uses YouTube API Services for user-authorized publishing and related
 
 AtlasSignal does not use Google user data for unrelated advertising purposes and does not use Google user data to train generalized AI or ML models.
 
+## Meta Platform Services (Facebook and Instagram)
+
+AtlasSignal may use Meta Platform APIs for user-authorized publishing workflows (for example, Facebook Page video/reel publishing and Instagram reel publishing).
+
+- Meta Platform Terms: https://developers.facebook.com/terms
+- Meta Platform Policy: https://developers.facebook.com/policy/
+- Meta Privacy Policy: https://www.facebook.com/privacy/policy/
+- Instagram Terms of Use: https://help.instagram.com/581066165581870
+- Instagram Privacy Policy: https://privacycenter.instagram.com/policy
+
+Data accessed (based on granted permissions) can include business account/page identifiers, media publish status, and content metadata needed to execute user-approved publishing.
+
+User control: you can revoke Meta/Instagram permissions at any time through account settings and by disconnecting integrations in AtlasSignal.
+
 ## Data Sharing Policy
 
 AtlasSignal does not sell personal data.
@@ -106,6 +120,7 @@ If this policy changes materially, the updated version will be posted on this pa
 	<p style="margin:0;">
 		<a class="btn btn--inverse" href="/">Home</a>
 		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
+		<a class="btn btn--inverse" href="/terms/">Terms</a>
 		<a class="btn btn--inverse" href="/categories/">Categories</a>
 		<a class="btn btn--inverse" href="/contact/">Contact</a>
 		<a class="btn btn--inverse" href="/about/">About</a>

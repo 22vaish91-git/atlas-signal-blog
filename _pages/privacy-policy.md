@@ -21,6 +21,7 @@ For the complete policy text including YouTube API Services disclosures and user
 	<h2>Open full privacy policy</h2>
 	<p style="margin:0;">
 		<a class="btn btn--primary" href="/privacy/">Open Privacy Policy</a>
+		<a class="btn btn--inverse" href="/terms/">Terms</a>
 		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
 		<a class="btn btn--inverse" href="/">Return Home</a>
 	</p>
