@@ -398,22 +398,31 @@ a.site-title {
 .btn--primary,
 .btn--inverse,
 #sub-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.68rem 1.08rem !important;
+  min-height: 42px;
   border-radius: 999px !important;
-  border: 1px solid rgba(25, 72, 152, 0.26) !important;
+  border: 1px solid rgba(112, 154, 245, 0.34) !important;
   font-weight: 600 !important;
-  box-shadow: 0 10px 24px rgba(31, 75, 151, 0.14) !important;
-  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease !important;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 28px rgba(9, 21, 42, 0.3) !important;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease !important;
 }
 
 .btn--primary,
 #sub-btn {
-  background: linear-gradient(135deg, #1752bd, #1f66ff) !important;
+  background: linear-gradient(135deg, #215dcc, #2f7bff) !important;
   color: #ffffff !important;
+  border-color: rgba(128, 180, 255, 0.55) !important;
 }
 
 .btn--inverse {
-  background: #161b28 !important;
-  color: #c0d4ef !important;
+  background: linear-gradient(180deg, rgba(18, 29, 49, 0.94), rgba(12, 19, 34, 0.96)) !important;
+  color: #e8f2ff !important;
+  border-color: rgba(131, 169, 241, 0.4) !important;
 }
 
 .btn:hover,
@@ -421,7 +430,15 @@ a.site-title {
 .btn--inverse:hover,
 #sub-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(29, 83, 178, 0.2) !important;
+  border-color: rgba(164, 204, 255, 0.7) !important;
+  box-shadow: 0 18px 30px rgba(23, 61, 125, 0.33) !important;
+}
+
+.as-inline-actions .btn,
+.as-story-panel .btn,
+.as-email-capture .btn {
+  text-decoration: none !important;
+  white-space: nowrap;
 }
 
 /* Subscribe block */
@@ -731,6 +748,11 @@ a.site-title {
   #subscribe-form #sub-btn {
     width: 100%;
     align-self: stretch;
+  }
+
+  .as-inline-actions .btn,
+  .as-story-panel .btn {
+    width: 100%;
   }
 }
 

@@ -137,6 +137,7 @@ category_archive:
 include:
   - _pages
   - ads.txt
+  - robots.txt
 
 exclude:
   - README.md

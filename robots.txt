@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Canonical sitemap for faster indexing and AdSense crawler discovery
+Sitemap: https://atlassignal.in/sitemap.xml
