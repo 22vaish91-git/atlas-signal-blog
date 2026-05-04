@@ -58,6 +58,12 @@ author:
     - label: "X"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/AtlasSignalDesk"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/atlassignal/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/profile.php?id=61588958171608"
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCSdsK1wfTmUyHzZXX_rt2aQ"
@@ -68,6 +74,12 @@ footer:
     - label: "X"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/AtlasSignalDesk"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/atlassignal/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/profile.php?id=61588958171608"
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCSdsK1wfTmUyHzZXX_rt2aQ"
@@ -87,6 +99,8 @@ social:
   name: AtlasSignal
   links:
     - "https://x.com/AtlasSignalDesk"
+    - "https://www.instagram.com/atlassignal/"
+    - "https://www.facebook.com/profile.php?id=61588958171608"
 
 # ── Post defaults ─────────────────────────────────────────────────────────────
 defaults:
