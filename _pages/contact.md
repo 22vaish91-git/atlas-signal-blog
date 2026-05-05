@@ -41,6 +41,8 @@ author_profile: false
 		<a class="btn btn--inverse" href="/">Home</a>
 		<a class="btn btn--inverse" href="/categories/">Categories</a>
 		<a class="btn btn--inverse" href="/about/">About</a>
+		<a class="btn btn--inverse" href="/editorial-standards/">Editorial Standards</a>
+		<a class="btn btn--inverse" href="/corrections-policy/">Corrections Policy</a>
 		<a class="btn btn--inverse" href="/privacy/">Privacy</a>
 	</p>
 </section>

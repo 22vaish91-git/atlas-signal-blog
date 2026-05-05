@@ -75,6 +75,8 @@ For legal or policy questions:
 	<p style="margin:0;">
 		<a class="btn btn--primary" href="/privacy/">Privacy Policy</a>
 		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
+		<a class="btn btn--inverse" href="/editorial-standards/">Editorial Standards</a>
+		<a class="btn btn--inverse" href="/corrections-policy/">Corrections Policy</a>
 		<a class="btn btn--inverse" href="/contact/">Contact</a>
 		<a class="btn btn--inverse" href="/">Home</a>
 	</p>

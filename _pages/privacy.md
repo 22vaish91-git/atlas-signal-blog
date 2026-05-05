@@ -105,6 +105,25 @@ You can:
 
 For deletion requests, see the dedicated data deletion page at /data-deletion/.
 
+## Cookies and Third-Party Advertising
+
+AtlasSignal uses cookies and similar technologies to operate the site and serve relevant content.
+
+### Google AdSense
+
+AtlasSignal participates in the Google AdSense programme. Google, as a third-party vendor, uses cookies (including the DoubleClick cookie) to serve ads based on prior visits to this and other websites.
+
+- Google's use of advertising cookies enables it and its partners to serve ads based on your visit to AtlasSignal and/or other Internet sites.
+- You may opt out of personalised advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads).
+- You can also opt out of third-party vendor cookie use by visiting the [Network Advertising Initiative opt-out page](https://www.networkadvertising.org/managing/opt_out.asp).
+- For more information, see [Google's Privacy Policy](https://policies.google.com/privacy) and [How Google uses data when you use our partners' sites or apps](https://policies.google.com/technologies/partner-sites).
+
+### Other Cookies
+
+AtlasSignal may use session or analytics cookies to understand site performance and reader engagement. These cookies do not identify you personally and are used only to improve site quality.
+
+You can configure your browser to refuse cookies or alert you when cookies are being sent. Some site features may not function properly if cookies are disabled.
+
 ## Contact Information
 
 For privacy questions or data rights requests:
@@ -121,6 +140,7 @@ If this policy changes materially, the updated version will be posted on this pa
 		<a class="btn btn--inverse" href="/">Home</a>
 		<a class="btn btn--inverse" href="/data-deletion/">Data Deletion</a>
 		<a class="btn btn--inverse" href="/terms/">Terms</a>
+		<a class="btn btn--inverse" href="/editorial-standards/">Editorial Standards</a>
 		<a class="btn btn--inverse" href="/categories/">Categories</a>
 		<a class="btn btn--inverse" href="/contact/">Contact</a>
 		<a class="btn btn--inverse" href="/about/">About</a>
