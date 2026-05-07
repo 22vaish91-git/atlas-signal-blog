@@ -15,23 +15,8 @@
 
         <form id="subscribe-form"
           class="as-subscribe-form"
-          data-api-url="{{ site.api_base_url | default: 'https://atlassignal.in' }}"
+          data-consent-url="{{ site.beehiiv_subscribe_url | default: 'https://atlassignal.beehiiv.com/' }}"
           novalidate>
-    <input
-      type="text"
-      id="sub-name"
-      name="name"
-      placeholder="Your name (optional)"
-      autocomplete="name"
-    >
-    <input
-      type="email"
-      id="sub-email"
-      name="email"
-      placeholder="your@email.com"
-      required
-      autocomplete="email"
-    >
 
     <div class="as-topic-wrap">
       <p class="as-topic-copy">Pick the lanes you want first in your inbox:</p>
@@ -56,7 +41,7 @@
     </label>
 
     <button type="submit" id="sub-btn">
-      Subscribe Free
+      Continue to Secure Signup
     </button>
     </form>
   </div>
@@ -104,26 +89,15 @@
     });
   }
 
-  ['sub-name', 'sub-email'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.addEventListener('input', clearStatus);
-  });
+  form.addEventListener('change', clearStatus);
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var btn     = document.getElementById('sub-btn');
-    var email   = (document.getElementById('sub-email').value || '').trim();
-    var name    = (document.getElementById('sub-name').value  || '').trim();
+    var btn = document.getElementById('sub-btn');
     var consent = document.getElementById('sub-consent');
-    var apiUrl  = (form.getAttribute('data-api-url') || '').replace(/\/$/, '');
+    var consentBase = (form.getAttribute('data-consent-url') || '').trim();
 
     var allTopics = ['AI', 'Tech', 'Space', 'Health', 'Sports', 'Innovation', 'General'];
-
-    if (!email) {
-      setStatus('is-error', 'Please enter a valid email address.');
-      return;
-    }
 
     var topics = Array.prototype.slice.call(
       form.querySelectorAll('input[name="topics"]:checked:not([data-all-topic="true"])')
@@ -143,71 +117,41 @@
       return;
     }
 
-    btn.disabled    = true;
-    btn.textContent = 'Subscribing...';
-    clearStatus();
-
-    var payload = JSON.stringify({ email: email, name: name, topics: topics, consent: true });
-    var endpoints = [];
-    if (apiUrl) endpoints.push(apiUrl + '/subscribe');
-    endpoints.push(window.location.origin.replace(/\/$/, '') + '/subscribe');
-    endpoints.push('https://atlassignal.in/subscribe');
-
-    endpoints = endpoints.filter(function (url, idx, arr) { return arr.indexOf(url) === idx; });
-
-    function trySubmit(index) {
-      if (index >= endpoints.length) {
-        throw new Error('All subscribe endpoints failed');
-      }
-
-      return fetch(endpoints[index], {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: payload
-      }).then(function (res) {
-        return res.text().then(function (text) {
-          var data = {};
-          try {
-            data = text ? JSON.parse(text) : {};
-          } catch (_) {
-            data = { detail: text || 'Subscription failed. Please try again.' };
-          }
-
-          if (!res.ok) {
-            if (res.status >= 500 && index < endpoints.length - 1) {
-              return trySubmit(index + 1);
-            }
-            return { ok: false, data: data };
-          }
-          return { ok: true, data: data };
-        });
-      }).catch(function () {
-        if (index < endpoints.length - 1) {
-          return trySubmit(index + 1);
-        }
-        return { ok: false, data: { detail: 'Subscription failed. Please try again.' } };
-      });
+    if (!consentBase) {
+      setStatus('is-error', 'Subscription is temporarily unavailable. Please try again shortly.');
+      return;
     }
 
-    trySubmit(0)
-      .then(function (r) {
-        if (r.ok) {
-          var already = r.data.status === 'already_subscribed';
-          setStatus(
-            already ? 'is-muted' : 'is-success',
-            already
-              ? 'You are already subscribed. Check your inbox for fresh briefings.'
-              : 'Almost done. Check your inbox and verify your email to activate delivery.'
-          );
-          form.reset();
-        } else {
-          setStatus('is-error', r.data.detail || 'Subscription failed. Please try again.');
-        }
-      })
-      .finally(function () {
-        btn.disabled    = false;
-        btn.textContent = 'Subscribe Free';
-      });
+    btn.disabled    = true;
+    btn.textContent = 'Redirecting...';
+    clearStatus();
+
+    function buildConsentUrl(baseUrl, selectedTopics) {
+      var url;
+      try {
+        url = new URL(baseUrl, window.location.origin);
+      } catch (_) {
+        return '';
+      }
+      url.searchParams.set('utm_source', 'atlassignal');
+      url.searchParams.set('utm_medium', 'consent_widget');
+      url.searchParams.set('utm_campaign', 'newsletter_optin');
+      if (selectedTopics && selectedTopics.length) {
+        url.searchParams.set('topics', selectedTopics.join(','));
+      }
+      return url.toString();
+    }
+
+    var target = buildConsentUrl(consentBase, topics);
+    if (!target) {
+      btn.disabled = false;
+      btn.textContent = 'Continue to Secure Signup';
+      setStatus('is-error', 'Subscription is temporarily unavailable. Please try again shortly.');
+      return;
+    }
+
+    setStatus('is-success', 'Redirecting you to secure Beehiiv signup...');
+    window.location.href = target;
   });
 })();
 </script>
