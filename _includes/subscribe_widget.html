@@ -4,7 +4,7 @@
       <span class="as-eyebrow">Free subscription</span>
       <h2 id="subscribe-title" class="as-subscribe-title">Intelligence briefing, not inbox clutter.</h2>
       <p class="as-subscribe-lead">
-        Get concise AtlasSignal dispatches with the strongest angle, strategic consequence, and a direct path into the full report.
+        Get concise AtlasSignal dispatches on topics that matter to you — no noise, no spam.
       </p>
       <div class="as-subscribe-points">
         <span>Fast hook</span>
@@ -13,36 +13,28 @@
       </div>
     </div>
 
-        <form id="subscribe-form"
-          class="as-subscribe-form"
-          data-consent-url="{{ site.beehiiv_subscribe_url | default: 'https://atlassignal.beehiiv.com/' }}"
-          novalidate>
+    <form id="subscribe-form"
+      class="as-subscribe-form"
+      data-consent-url="{{ site.beehiiv_subscribe_url | default: 'https://atlassignal.beehiiv.com/subscribe' }}"
+      novalidate>
 
-    <div class="as-topic-wrap">
-      <p class="as-topic-copy">Pick the lanes you want first in your inbox:</p>
-      <div class="as-topic-grid">
-        <label class="as-topic-label as-topic-label-all"><input type="checkbox" name="topics" value="All" data-all-topic="true"><span>All topics</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="AI"><span>AI</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Tech"><span>Tech</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Space"><span>Space</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Health"><span>Health</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Sports"><span>Sports</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="Innovation"><span>Innovation</span></label>
-        <label class="as-topic-label"><input type="checkbox" name="topics" value="General"><span>General</span></label>
+      <div class="as-topic-wrap">
+        <p class="as-topic-copy">Pick the topics you want in your inbox:</p>
+        <div class="as-topic-grid">
+          <label class="as-topic-label as-topic-label-all"><input type="checkbox" name="topics" value="All" data-all-topic="true"><span>All topics</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="AI"><span>AI</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="Tech"><span>Tech</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="Space"><span>Space</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="Health"><span>Health</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="Sports"><span>Sports</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="Innovation"><span>Innovation</span></label>
+          <label class="as-topic-label"><input type="checkbox" name="topics" value="General"><span>General</span></label>
+        </div>
       </div>
-    </div>
 
-    <label class="as-consent-label">
-      <input type="checkbox" id="sub-consent" required>
-      <span>
-        I agree to receive AtlasSignal topic updates.
-        <span class="as-consent-subtext">Unsubscribe any time. <a href="/privacy/">Privacy Policy</a>.</span>
-      </span>
-    </label>
-
-    <button type="submit" id="sub-btn">
-      Continue to Secure Signup
-    </button>
+      <button type="submit" id="sub-btn">
+        Continue to Secure Signup
+      </button>
     </form>
   </div>
 
@@ -68,35 +60,22 @@
     status.textContent = message;
   }
 
-  function clearStatus() {
-    var status = document.getElementById('sub-status');
-    if (!status) return;
-    status.style.display = 'none';
-    status.className = 'as-sub-status';
-    status.textContent = '';
-  }
-
   if (allCheckbox) {
     allCheckbox.addEventListener('change', function () {
       topicCheckboxes.forEach(function (cb) { cb.checked = allCheckbox.checked; });
     });
-
     topicCheckboxes.forEach(function (cb) {
       cb.addEventListener('change', function () {
-        var everyChecked = topicCheckboxes.length > 0 && topicCheckboxes.every(function (item) { return item.checked; });
-        allCheckbox.checked = everyChecked;
+        var all = topicCheckboxes.length > 0 && topicCheckboxes.every(function (i) { return i.checked; });
+        allCheckbox.checked = all;
       });
     });
   }
 
-  form.addEventListener('change', clearStatus);
-
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = document.getElementById('sub-btn');
-    var consent = document.getElementById('sub-consent');
     var consentBase = (form.getAttribute('data-consent-url') || '').trim();
-
     var allTopics = ['AI', 'Tech', 'Space', 'Health', 'Sports', 'Innovation', 'General'];
 
     var topics = Array.prototype.slice.call(
@@ -108,50 +87,34 @@
     }
 
     if (!topics.length) {
-      setStatus('is-error', 'Please select at least one topic.');
+      setStatus('is-error', 'Please select at least one topic to continue.');
       return;
     }
 
-    if (!consent || !consent.checked) {
-      setStatus('is-error', 'Please provide consent to continue.');
-      return;
+    btn.disabled = true;
+    btn.textContent = 'Continuing...';
+
+    var url;
+    try {
+      url = new URL(consentBase, window.location.origin);
+    } catch (_) {
+      url = null;
     }
 
-    if (!consentBase) {
-      setStatus('is-error', 'Subscription is temporarily unavailable. Please try again shortly.');
-      return;
-    }
-
-    btn.disabled    = true;
-    btn.textContent = 'Redirecting...';
-    clearStatus();
-
-    function buildConsentUrl(baseUrl, selectedTopics) {
-      var url;
-      try {
-        url = new URL(baseUrl, window.location.origin);
-      } catch (_) {
-        return '';
-      }
-      url.searchParams.set('utm_source', 'atlassignal');
-      url.searchParams.set('utm_medium', 'consent_widget');
-      url.searchParams.set('utm_campaign', 'newsletter_optin');
-      if (selectedTopics && selectedTopics.length) {
-        url.searchParams.set('topics', selectedTopics.join(','));
-      }
-      return url.toString();
-    }
-
-    var target = buildConsentUrl(consentBase, topics);
-    if (!target) {
+    if (!url) {
       btn.disabled = false;
       btn.textContent = 'Continue to Secure Signup';
-      setStatus('is-error', 'Subscription is temporarily unavailable. Please try again shortly.');
+      setStatus('is-error', 'Signup is temporarily unavailable. Please try again shortly.');
       return;
     }
 
-    setStatus('is-success', 'Redirecting you to secure Beehiiv signup...');
-    window.location.href = target;
+    // Pass selected topics so Beehiiv captures them and webhook syncs to local DB
+    url.searchParams.set('topics', topics.join(','));
+    url.searchParams.set('utm_source', 'atlassignal');
+    url.searchParams.set('utm_medium', 'blog_widget');
+    url.searchParams.set('utm_campaign', 'newsletter_optin');
+
+    window.location.href = url.toString();
   });
 })();
 </script>
