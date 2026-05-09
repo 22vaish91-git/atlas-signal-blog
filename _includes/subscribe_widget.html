@@ -43,8 +43,15 @@
 
 <script>
 (function () {
+  // Prevent multiple script executions on the same page
+  if (window.__atlasSignalSubscribeReady) return;
+  window.__atlasSignalSubscribeReady = true;
+
   var form = document.getElementById('subscribe-form');
-  if (!form || form.dataset.bound === 'true') return;
+  if (!form) return;
+
+  // Double-check: ensure we only bind once per form
+  if (form.dataset.bound === 'true') return;
   form.dataset.bound = 'true';
 
   var allCheckbox = form.querySelector('input[data-all-topic="true"]');
@@ -108,12 +115,16 @@
       return;
     }
 
+    url.searchParams.delete('modal');
+
     // Pass selected topics so Beehiiv captures them and webhook syncs to local DB
     url.searchParams.set('topics', topics.join(','));
     url.searchParams.set('utm_source', 'atlassignal');
     url.searchParams.set('utm_medium', 'blog_widget');
     url.searchParams.set('utm_campaign', 'newsletter_optin');
 
+    console.log('[AtlasSignal] Topics selected:', topics);
+    console.log('[AtlasSignal] Redirecting to Beehiiv consent URL with topics');
     window.location.href = url.toString();
   });
 })();
