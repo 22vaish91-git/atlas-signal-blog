@@ -4,7 +4,7 @@
       <span class="as-eyebrow">Free subscription</span>
       <h2 id="subscribe-title" class="as-subscribe-title">Intelligence briefing, not inbox clutter.</h2>
       <p class="as-subscribe-lead">
-        Get concise AtlasSignal dispatches on topics that matter to you — no noise, no spam.
+        Pick topics here — email signup happens in the secure Beehiiv popup (we never collect email on this page).
       </p>
       <div class="as-subscribe-points">
         <span>Fast hook</span>
@@ -15,6 +15,7 @@
 
     <form id="subscribe-form"
       class="as-subscribe-form"
+      data-api-base="{{ site.api_base_url | default: '' }}"
       data-consent-url="{{ site.beehiiv_subscribe_url | default: 'https://atlassignal.beehiiv.com/subscribe' }}"
       novalidate>
 
@@ -33,7 +34,7 @@
       </div>
 
       <button type="submit" id="sub-btn">
-        Continue to Secure Signup
+        Open Secure Signup
       </button>
     </form>
   </div>
@@ -43,14 +44,11 @@
 
 <script>
 (function () {
-  // Prevent multiple script executions on the same page
   if (window.__atlasSignalSubscribeReady) return;
   window.__atlasSignalSubscribeReady = true;
 
   var form = document.getElementById('subscribe-form');
   if (!form) return;
-
-  // Double-check: ensure we only bind once per form
   if (form.dataset.bound === 'true') return;
   form.dataset.bound = 'true';
 
@@ -82,6 +80,7 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = document.getElementById('sub-btn');
+    var apiBase = (form.getAttribute('data-api-base') || '').replace(/\/$/, '');
     var consentBase = (form.getAttribute('data-consent-url') || '').trim();
     var allTopics = ['AI', 'Tech', 'Space', 'Health', 'Sports', 'Innovation', 'General'];
 
@@ -99,33 +98,57 @@
     }
 
     btn.disabled = true;
-    btn.textContent = 'Continuing...';
+    btn.textContent = 'Opening signup…';
 
-    var url;
-    try {
-      url = new URL(consentBase, window.location.origin);
-    } catch (_) {
-      url = null;
+    function openBeehiivPopup(intentId) {
+      var url;
+      try {
+        url = new URL(consentBase, window.location.origin);
+      } catch (_) {
+        url = null;
+      }
+      if (!url) {
+        setStatus('is-error', 'Signup is temporarily unavailable. Please try again shortly.');
+        btn.disabled = false;
+        btn.textContent = 'Open Secure Signup';
+        return;
+      }
+      url.searchParams.set('utm_source', 'atlassignal');
+      url.searchParams.set('utm_medium', 'blog_widget');
+      url.searchParams.set('utm_campaign', 'newsletter_optin');
+      if (intentId) {
+        url.searchParams.set('utm_content', intentId);
+      }
+      url.searchParams.set('topics', topics.join(','));
+      var popup = window.open(url.toString(), 'atlassignal_beehiiv_signup', 'noopener,width=520,height=720');
+      if (!popup) {
+        window.location.href = url.toString();
+      }
+      setStatus('is-success', 'Complete signup in the Beehiiv window. You can close it after subscribing.');
+      btn.disabled = false;
+      btn.textContent = 'Open Secure Signup';
     }
 
-    if (!url) {
-      btn.disabled = false;
-      btn.textContent = 'Continue to Secure Signup';
-      setStatus('is-error', 'Signup is temporarily unavailable. Please try again shortly.');
+    if (!apiBase) {
+      openBeehiivPopup('');
       return;
     }
 
-    url.searchParams.delete('modal');
-
-    // Pass selected topics so Beehiiv captures them and webhook syncs to local DB
-    url.searchParams.set('topics', topics.join(','));
-    url.searchParams.set('utm_source', 'atlassignal');
-    url.searchParams.set('utm_medium', 'blog_widget');
-    url.searchParams.set('utm_campaign', 'newsletter_optin');
-
-    console.log('[AtlasSignal] Topics selected:', topics);
-    console.log('[AtlasSignal] Redirecting to Beehiiv consent URL with topics');
-    window.location.href = url.toString();
+    fetch(apiBase + '/subscribe/intent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ topics: topics })
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('intent_failed');
+        return res.json();
+      })
+      .then(function (data) {
+        openBeehiivPopup((data && data.intent_id) ? data.intent_id : '');
+      })
+      .catch(function () {
+        openBeehiivPopup('');
+      });
   });
 })();
 </script>

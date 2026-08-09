@@ -11,6 +11,7 @@ logo: "/assets/images/header.png"
 # Lambda Function URL for atlas-signal-api (FastAPI + Mangum).
 # Update this when the Function URL changes (check AWS console → atlas-signal-api → Configuration → Function URL).
 api_base_url: "https://vz8hhibmqg.execute-api.us-east-1.amazonaws.com"
+beehiiv_subscribe_url: "https://atlassignal.beehiiv.com/subscribe"
 
 # ── Monetisation / AdSense ───────────────────────────────────────────────────
 # `publisher_id` is your AdSense account ID (ca-pub-...).
